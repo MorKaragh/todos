@@ -1,15 +1,19 @@
 (ns todos.tryouts
-  (:require [clojure.string :as str])
+  (:require [clojure.string :as str] :reload)
+  (:require [todos.problems :as prob] :reload)
   (:gen-class))
-
-(def randVar 10)
-(def aString "foo bar baz")
-(def ranDouble 10.01)
+(use 'clojure.data.json)
+(require '(clojure.data [json :as json-lib]))
+(use 'clojure.xml)
 
 (defn -main
   "I don't do a whole lot."
   [& args]
 
+
+  (def randVar 10)
+  (def aString "foo bar baz")
+  (def ranDouble 10.01)
   (def aLong 15)
   (def aString "world")
   (neg? aLong)
@@ -287,18 +291,18 @@
     (.getName (class (make-array clazz 0))))
 
   (array-type BigDecimal)
-  
-  (def bigdec-arr 
+
+  (def bigdec-arr
     ^"[Ljava.math.BigDecimal;"
     (into-array BigDecimal [1.0M]))
-  
+
   (defn average-my [numbers]
     (/ (reduce + numbers) (count numbers)))
-  
+
   (defn average [numbers]
     (let [total (apply + numbers)]
       (/ total (count numbers))))
-  
+
   (defn safe-average [numbers]
     (let [total (apply + numbers)]
       (try
@@ -306,34 +310,34 @@
         (catch ArithmeticException e
           (println "divided by zero")
           0))))
-  
+
   (average [])
   (safe-average [])
-  
+
   (try
     (/ 1 0)
     (catch RuntimeException e "Runtime")
     (catch ArithmeticException e "Ari")
     (finally (println "done")))
-  
-  (def total-cost-again 
-    (fn [items-amount price] 
+
+  (def total-cost-again
+    (fn [items-amount price]
       (* items-amount price)))
-  
+
   (total-cost-again 22 2)
-  
-  
-  (defn total-cost 
+
+
+  (defn total-cost
     "does stupid multiplication"
     [items-count price]
     (* items-count price))
 
   (:doc (meta #'total-cost))
-  
+
   (defn ^{:first-meta 1} stoopid "returns parameter" {:second-meta 2} [x] x)
-  
+
   (:doc (meta #'stoopid))
-  
+
   (defn item-total [price quantity discount]
     {:pre  [(> price 0) (> quantity 0)]
      :post [(< % 1000)]}
@@ -341,101 +345,101 @@
          (- 1)
          (* price quantity)
          float))
-  
+
   (item-total 100 2 5)
-  
+
   ;; Assert will fail
-  (item-total 0 2 5) 
-  
-  (defn multiarity 
+  (item-total 0 2 5)
+
+  (defn multiarity
     ([x] (println "one") 1)
     ([x y] (println "two") 2))
-  
+
   (defn sum-all [& nums]
     (apply + nums))
-  
+
   (sum-all 0 1 2 3 4 5)
-  
+
   (defn count-down [x]
     (when-not (zero? x)
       (when (zero? (rem x 100))
         (println "countdown " x))
       (recur (dec x))))
-  
+
   (count-down 10000)
-  
+
   (declare hat)
-  
+
   (defn cat [n]
     (when-not (zero? n)
       (when (zero? (rem n 100))
         (println "cat." n))
       (hat (dec n))))
-  
+
   (defn hat [n]
     (when-not (zero? n)
       (when (zero? (rem n 100))
         (println "hat." n))
       (cat (dec n))))
-  
+
   (cat 100000)
-  
-  
+
+
   (declare hatt)
-  
+
   (defn catt [n]
     (when-not (zero? n)
       (when (zero? (rem n 100))
         (println "catt:" n))
       (fn [] (hatt (dec n)))))
-  
+
   (defn hatt [n]
     (when-not (zero? n)
       (when (zero? (rem n 100))
         (println "hatt:" n))
       (fn [] (catt (dec n)))))
-  
+
   (trampoline catt 10000)
-  
+
   (defn tezt [& more]
     (doseq [x more] (println x "; "))
     0)
-  
+
   (apply tezt [1 2 3 4 5])
-  
+
   (def vals [1 2 3 4 5])
   (every? even? vals)
-  
+
   (def names ["Alice" "Bob" "Curt" "Donna"])
   (some (fn [s] (= s "Bob")) names)
-  
+
   (def const (constantly "CONSTANT"))
   (apply const [1 2 3])
-  
+
   (defn greater? [x y]
-    (> x y)) 
+    (> x y))
   (def smaller? (complement greater?))
-  
-  (def combi (comp 
+
+  (def combi (comp
               (fn [x] (str x "-"))
               (fn [x] (str x "!"))
-              (fn [x] (str x "?")))) 
+              (fn [x] (str x "?"))))
   (combi 1)
-  
+
   (defn above-threshold [threshold number]
-    (> number threshold)) 
-  (filter (fn [x] (above-threshold 5 x)) [1 2 3 4 5 6 7 8]) 
-  (def above-five (partial above-threshold 5)) 
+    (> number threshold))
+  (filter (fn [x] (above-threshold 5 x)) [1 2 3 4 5 6 7 8])
+  (def above-five (partial above-threshold 5))
   (filter above-five [1 2 3 4 5 6 7 8])
-  
+
   (defn slow-calc [x y]
     (Thread/sleep 1000)
     (* x y))
-  
+
   (def fast-calc (memoize slow-calc))
-  
+
   (fast-calc 2 5)
-  
+
   (def users
     [{:username     "kyle"
       :firstname    "Kyle"
@@ -453,71 +457,71 @@
       :lastname     "Jones"
       :balance      98.50M
       :member-since "2009-03-30"}])
-  
+
   (defn sorter-using [ordering-fn]
     (fn [collection]
       (sort-by ordering-fn collection)))
-  
+
   (defn lastname-firstname [user]
     [(user :lastname) (user :firstname)])
-  
+
   (defn balance [user] (user :balance))
-  
+
   (defn username [user] (user :username))
-  
+
   (def poorest-first (sorter-using balance))
   (def alphabetically (sorter-using username))
   (def last-first-name (sorter-using lastname-firstname))
-  
-  (poorest-first users) 
-  
+
+  (poorest-first users)
+
   (map :lastname users)
-  
+
   (def anon-fun (fn [x] (str "this is " x)))
   (def another-anon-fun #(str "this is " %))
-  
+
   (another-anon-fun "sparta")
   (anon-fun "sparta")
-  
+
   (= (- 10 (* 2 3)) 4)
-  
+
   (#(vector %&) 1 2 3 4 5)
   (map #(str % "-") [1 2 3 4 5])
-  
-  (def person {:name    "Vasya"
-               :surname "Petkin"
-               :status  "Winner"
-               :money nil
+
+  (def person {:name          "Vasya"
+               :surname       "Petkin"
+               :status        "Winner"
+               :money         nil
                'symbol "LOL"})
-  
+
   (:name person)
   (:money person)
   (:no-such-prop person :not-found) ;; default value to avoid ambiguity 
   
   (map :member-since users)
-  
+
   ('symbol person)
   (person 'symbol)
-  
-  
+
+
   (def ^:dynamic SOME-VAR)
-  
+
   (binding [SOME-VAR "ololo"]
     (str SOME-VAR))
-  
+
   (try (SOME-VAR)
        (catch Exception e "OOPS"))
-  
+
   (def ^:dynamic *db-host* "localhost")
-  
+
   (defn expense-report [start-date end-date]
     (println *db-host*))
-  
+
   (binding [*db-host* "production"]
     (expense-report "2010-01-01" "2010-01-07"))
-  
+
   (expense-report "2010-01-01" "2010-01-07")
-  
+
   (def ^:dynamic dynvar 10)
   (defn print-var [label]
     (println label dynvar))
@@ -528,13 +532,13 @@
       (print-var "C: "))
     (print-var "D:"))
   (print-var "E: ")
-  
-  
+
+
   (defn ^:dynamic twice [x]
     (println "toooowise")
-    (* 2 x)) 
+    (* 2 x))
   (defn call-twice [x]
-    (twice x)) 
+    (twice x))
   (defn with-log [func logmsg]
     (fn [& args]
       (println "logging: " logmsg)
@@ -543,20 +547,284 @@
   (binding [twice (with-log twice "calling TWICE")]
     (call-twice 20))
   (call-twice 30)
-  
+
   (def ^:dynamic *factor* 10)
   (defn multiply [x]
     (* x *factor*))
-  (map multiply [1 2 3 4 5]) 
+  (map multiply [1 2 3 4 5])
   ;; map is lazy and therefore binding does not work
   (binding [*factor* 20]
-    (map multiply [1 2 3 4 5])) 
+    (map multiply [1 2 3 4 5]))
   (binding [*factor* 20]
-    (doall (map multiply [1 2 3 4 5]))) 
-  
-  (let [x 10 y 20]
+    (doall (map multiply [1 2 3 4 5])))
+
+  (let [x 10
+        y 20]
     (println (format "x: %d y: %d" x y)))
+
+
+  ;; 3.4.2 The let form revisited
   
+  (defn upcased [v]
+    (let [upp (fn [x] (.toUpperCase x))]
+      (map upp v)))
+
+  (upcased ["one" "two" "three"])
+
+  (def ^:dynamic *factor* 10)
+  (binding [*factor* 20]
+    (println *factor*)
+    (doall (map multiply [1 2 3 4 5])))
+  ;=> (20 40 60 80 100)
+  
+  (let [*factor* 20]
+    (println *factor*)
+    (doall (map multiply [1 2 3 4 5])))
+  ;=> (10 20 30 40 50)
+  ;=> потому что внутренности multiply вне скоупа let, и let не влияет на динамический var
+  
+  (defn create-scaler [scale]
+    (fn [x] (* x scale)))
+
+  (def percent-scaler (create-scaler 100))
+
+  (percent-scaler 0.59)
+
+  (defn- privv [x]
+    (* x x))
+
+  (privv 11)
+
+  (json-lib/json-str users)
+
+  (prob/nice-rev [12 3 4 5])
+  (all-ns)
+
+  (defn describe-smth [person]
+    (let [first  (:first-name person)
+          last   (:last-name person)
+          annual (:salary person)]
+      (println first last "earns" annual)))
+
+  (defn describe-smth-2 [{first  :first-name
+                          last   :last-name
+                          annual :salary
+                          bonus  :bonus
+                          :or    {bonus 5}
+                          :as    all}]
+    (println first last "earns" annual "and has bonus" bonus)
+    (println all))
+
+  (describe-smth {:first-name "Vasya"
+                  :last-name  "Sidorov"
+                  :salary     400000M})
+  (describe-smth-2 {:first-name "Vasya"
+                    :last-name  "Sidorov"
+                    :salary     400000M})
+  (describe-smth-2 {:first-name "Petya"
+                    :last-name  "Ivanov"
+                    :salary     400000M
+                    :bonus      1})
+
+  (defn print-vec [[elem-1 elem-2]]
+    (println "printing" elem-1 "and" elem-2))
+  (print-vec [1 2])
+
+  (defn print-smth-with-all [[smth-1 smth-2 & remaining :as all]]
+    (println "fir" smth-1 "sec" smth-2 "other" remaining)
+    (println "also all" all))
+
+  (print-smth-with-all [1 2 3 4])
+
+  (defn print-categs [[[category amount] & _]]
+    (println "first category" category)
+    (println "first amount" amount))
+
+  (def expenses [[:books 49.95] [:coffee 4.95] [:caltrain 2.25]])
+  (print-categs expenses)
+
+  (defn greet-person [{:keys [first-name last-name]}]
+    (println "Welcome" first-name last-name))
+
+  (greet-person {:first-name "Petya"
+                 :last-name  "Ivanov"
+                 :salary     400000M
+                 :bonus      1})
+
+  (java.util.UUID/randomUUID)
+
+  (use 'todos.datareaders)
+  (todos.datareaders/guid "aaaa1111")
+
+
+  (defn poly-func [obj]
+    (condp = (type obj)
+      java.lang.String "String"
+      clojure.lang.PersistentVector "Vector"))
+
+  (poly-func ["a" "b"])
+
+  (def typez {java.lang.String              (fn [x] "String")
+              clojure.lang.PersistentVector (fn [x] "Vector")})
+
+  (defn poly-func-2 [obj]
+    (let [dispatch-value (type obj)]
+      (if-let [implementation
+               (get typez dispatch-value)]
+        (implementation obj)
+        (throw (IllegalArgumentException.
+                (str "No implementation found for " dispatch-value))))))
+
+  (poly-func-2 "oo")
+
+  (def typez
+    (assoc typez
+           clojure.lang.PersistentArrayMap (fn [x] "Map")))
+
+  (poly-func-2 {})
+
+  (defn map-type-namer [obj]
+    (condp = (type obj)
+      clojure.lang.PersistentArrayMap "map"
+      clojure.lang.PersistentHashMap  "map"))
+
+  (defn good-map-type-namer [obj]
+    (cond
+      (instance? clojure.lang.APersistentMap obj) "map"
+      :else (throw (IllegalArgumentException. (str "Unknown type" (type obj))))))
+
+  (map-type-namer (hash-map))
+  (map-type-namer (array-map))
+  (map-type-namer (sorted-map))
+  (good-map-type-namer (sorted-map))
+
+  (def example-person {:login    "Bob"
+                       :referrer "lol.com"
+                       :salary   100000})
+
+  (defn fee-amount [percentage user]
+    (with-precision 16 :rounding HALF_EVEN
+                    (* 0.01M percentage (:salary user))))
+
+  (defn affiliate-fee [user]
+    (case (:referrer user)
+      "google.com" (fee-amount 0.01M user)
+      "lol.com" (fee-amount 0.03M user)
+      (fee-amount 0.02M user)))
+
+  (affiliate-fee example-person)
+
+  (defmulti affiliate-fee-2
+    (fn [user] (:referrer user)))
+  (defmethod affiliate-fee-2 "lol.com" [user]
+    (fee-amount 0.03M user))
+  (defmethod affiliate-fee-2 "google.com" [user]
+    (fee-amount 0.01M user))
+  (defmethod affiliate-fee-2 :default [user]
+    (fee-amount 0.02M user))
+  
+
+  (affiliate-fee-2 example-person)
+  
+  (def operations {'+ "+"
+                   '- "-"})
+  
+  (defmulti calculator
+    (fn [oper x y] (operations oper))
+    :default "*")
+  (defmethod calculator "+" [oper x y]
+    (+ x y))
+  (defmethod calculator "-" [oper x y]
+    (- x y))
+  (defmethod calculator "*" [oper x y]
+    (* x y))
+  
+  (methods calculator)
+  (get-method calculator "+")
+  
+  (def user-1 {:login    "rob"
+               :referrer "mint.com"
+               :salary   100000
+               :rating   :rating/bronze})
+  (def user-2 {:login    "gordon"
+               :referrer "mint.com"
+               :salary   80000
+               :rating   :rating/silver})
+  (def user-3 {:login    "kyle"
+               :referrer "google.com"
+               :salary   90000
+               :rating   :rating/gold})
+  (def user-4 {:login    "celeste"
+               :referrer "yahoo.com"
+               :salary   70000
+               :rating   :rating/platinum})
+  
+  (defn fee-category [user]
+    [(:referrer user) (:rating user)])
+  
+  (map fee-category [user-1 user-2 user-3 user-4])
+  
+  (defmulti profi-based-affiliate-fee fee-category)
+  (defmethod profi-based-affiliate-fee ["mint.com" :rating/bronze]
+    [user] (fee-amount 0.03M user)) 
+  (defmethod profi-based-affiliate-fee :default
+    [user] (fee-amount 0.02M user))
+  
+  (map profi-based-affiliate-fee [user-1 user-2 user-3 user-4])
+  
+  (defmulti greet-multi :rating) 
+  (defmethod greet-multi :rating/basic [user]
+    (str "Hello " (:login user) "."))
+  (defmethod greet-multi :rating/premium [user]
+    (str "Hello, platinum " (:login user) "."))
+  (defmethod greet-multi :default [user]
+    (str "Get out, " (:login user) "! You are a moron!"))
+  
+  (derive :rating/bronze :rating/basic)
+  (derive :rating/silver :rating/basic)
+  (derive :rating/gold :rating/premium)
+  (derive :rating/platinum :rating/premium)
+  (derive :rating/basic :rating/ANY)
+  (derive :rating/platinum :rating/ANY)
+  
+  (isa? :rating/gold :rating/premium)
+  (parents :rating/gold)
+  (ancestors :rating/platinum)
+  (parents :rating/platinum)
+  (descendants :rating/premium)
+  
+  (ns-unmap *ns* 'my-multi) 
+  
+  (map greet-multi [user-1 user-2 user-3 user-4 example-person])
+  
+  (remove-method greet-multi :rating/basic)
+  
+  (defmulti size-up (fn [observer observed]
+                      [(:rating observer) (:rating observed)]))
+  
+  (prefer-method size-up [:rating/ANY :rating/platinum]
+                 [:rating/paltinum :rating/ANY])
+  
+  (defmethod size-up [:rating/premium :rating/ANY] [_ observed]
+    (str (:login observed) " seems weak"))
+  
+  (defmethod size-up [:rating/ANY :rating/premium] [_ observed]
+    (str (:login observed) " seems scary"))
+  
+  (size-up {:rating :rating/premium} {:rating :rating/platinum})
+  (size-up {:rating :rating/platinum} {:rating :rating/premium})
+  
+  (defmulti my-multi (fn [& more] more))
+  (defmethod my-multi :default 
+    ([] "none")
+    ([x] "one")
+    ([x y] "two")
+    ([x y & etc] "many"))
+  
+  (my-multi)
+  (my-multi "x")
+  (my-multi "x" "y")
+  (my-multi "x" "y" "z")
   
   
   
