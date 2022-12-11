@@ -1,6 +1,7 @@
 (ns todos.tryouts
   (:require [clojure.string :as str] :reload)
   (:require [todos.problems :as prob] :reload)
+  (:import (java.util Set Date))
   (:gen-class))
 (use 'clojure.data.json)
 (require '(clojure.data [json :as json-lib]))
@@ -722,13 +723,13 @@
     (fee-amount 0.01M user))
   (defmethod affiliate-fee-2 :default [user]
     (fee-amount 0.02M user))
-  
+
 
   (affiliate-fee-2 example-person)
-  
+
   (def operations {'+ "+"
                    '- "-"})
-  
+
   (defmulti calculator
     (fn [oper x y] (operations oper))
     :default "*")
@@ -738,10 +739,10 @@
     (- x y))
   (defmethod calculator "*" [oper x y]
     (* x y))
-  
+
   (methods calculator)
   (get-method calculator "+")
-  
+
   (def user-1 {:login    "rob"
                :referrer "mint.com"
                :salary   100000
@@ -758,74 +759,120 @@
                :referrer "yahoo.com"
                :salary   70000
                :rating   :rating/platinum})
-  
+
   (defn fee-category [user]
     [(:referrer user) (:rating user)])
-  
+
   (map fee-category [user-1 user-2 user-3 user-4])
-  
+
   (defmulti profi-based-affiliate-fee fee-category)
   (defmethod profi-based-affiliate-fee ["mint.com" :rating/bronze]
-    [user] (fee-amount 0.03M user)) 
+    [user] (fee-amount 0.03M user))
   (defmethod profi-based-affiliate-fee :default
     [user] (fee-amount 0.02M user))
-  
+
   (map profi-based-affiliate-fee [user-1 user-2 user-3 user-4])
-  
-  (defmulti greet-multi :rating) 
+
+  (defmulti greet-multi :rating)
   (defmethod greet-multi :rating/basic [user]
     (str "Hello " (:login user) "."))
   (defmethod greet-multi :rating/premium [user]
     (str "Hello, platinum " (:login user) "."))
   (defmethod greet-multi :default [user]
     (str "Get out, " (:login user) "! You are a moron!"))
-  
+
   (derive :rating/bronze :rating/basic)
   (derive :rating/silver :rating/basic)
   (derive :rating/gold :rating/premium)
   (derive :rating/platinum :rating/premium)
   (derive :rating/basic :rating/ANY)
   (derive :rating/platinum :rating/ANY)
-  
+
   (isa? :rating/gold :rating/premium)
   (parents :rating/gold)
   (ancestors :rating/platinum)
   (parents :rating/platinum)
   (descendants :rating/premium)
-  
-  (ns-unmap *ns* 'my-multi) 
-  
+
+  (ns-unmap *ns* 'my-multi)
+
   (map greet-multi [user-1 user-2 user-3 user-4 example-person])
-  
+
   (remove-method greet-multi :rating/basic)
-  
+
   (defmulti size-up (fn [observer observed]
                       [(:rating observer) (:rating observed)]))
-  
+
   (prefer-method size-up [:rating/ANY :rating/platinum]
                  [:rating/paltinum :rating/ANY])
-  
+
   (defmethod size-up [:rating/premium :rating/ANY] [_ observed]
     (str (:login observed) " seems weak"))
-  
+
   (defmethod size-up [:rating/ANY :rating/premium] [_ observed]
     (str (:login observed) " seems scary"))
-  
+
   (size-up {:rating :rating/premium} {:rating :rating/platinum})
   (size-up {:rating :rating/platinum} {:rating :rating/premium})
-  
+
   (defmulti my-multi (fn [& more] more))
-  (defmethod my-multi :default 
+  (defmethod my-multi :default
     ([] "none")
     ([x] "one")
     ([x y] "two")
     ([x y & etc] "many"))
-  
+
   (my-multi)
   (my-multi "x")
   (my-multi "x" "y")
   (my-multi "x" "y" "z")
+
+  (def myhier (make-hierarchy))
+
+  myhier
+
+  (derive myhier :a :letter)
+
+  (def myhier (-> myhier
+                  (derive :a :letter)
+                  (derive :b :letter)
+                  (derive :c :letter)))
+
+  (isa? myhier :a :letter)
+  (parents myhier :a)
+
+  (defmulti letter? identity :hierarchy #'myhier)
+  (defmethod letter? :letter [_] true)
+  (letter? :a)
+  (letter? :d)
+
+  (def myhier (derive myhier :d :letter))
+
+  (import '(java.text SimpleDateFormat))
+  (def sdf (new SimpleDateFormat "yyyy-MM-dd"))
+  (def sdf-2 (SimpleDateFormat. "yyyy-MM-dd"))
   
+  (defn parse-date [date]
+    (let [sdf (SimpleDateFormat. "dd.MM.yyyy")]
+      (.parse sdf date)))
+  
+  (parse-date "14.01.1987")
+  
+  (Long/parseLong "123321")
+  
+  (import '(java.util Calendar))
+  Calendar/JANUARY
+  
+  (. System (getenv "PATH"))
+  (. System getenv "PATH")
+  
+  (import '(java.util Random))
+  (def rnd (Random.))
+  (. rnd nextInt 10)
+  
+  (. (. (Calendar/getInstance) (getTimeZone) ) (getDisplayName)) 
+  (.. (Calendar/getInstance) getTimeZone getDisplayName)
+   
   
   
   )

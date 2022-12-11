@@ -322,3 +322,104 @@ clj꞉todos.tryouts꞉> 
  :ancestors {:a #{:letter}, :b #{:letter}, :c #{:letter}, :d #{:letter}},
  :descendants {:letter #{:c :b :d :a}}}
 clj꞉todos.tryouts꞉> 
+[]
+[9]
+[9 8]
+[9 8 7]
+[9 8 7 6]
+[9 8 7 6 5]
+[9 8 7 6 5 4]
+[9 8 7 6 5 4 3]
+[9 8 7 6 5 4 3 2]
+[9 8 7 6 5 4 3 2 1]
+nil
+clj꞉todos.tryouts꞉> 
+java.text.SimpleDateFormat
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/sdf
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/sdf
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/sdf-2
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/parse-date
+clj꞉todos.tryouts꞉> 
+#inst "1987-01-13T18:00:00.000-00:00"
+clj꞉todos.tryouts꞉> 
+123321
+clj꞉todos.tryouts꞉> 
+; Syntax error macroexpanding clojure.core/import at (tryouts.clj:863:3).
+; () - failed: Insufficient input at: [:package-list :quoted-spec :spec :classes] spec: :clojure.core.specs.alpha/package-list
+; (java.util.Calendar) - failed: simple-symbol? at: [:class :quoted-spec :spec] spec: :clojure.core.specs.alpha/quotable-import-list
+; (java.util.Calendar) - failed: simple-symbol? at: [:package-list :spec :classes] spec: :clojure.core.specs.alpha/package-list
+; (quote (java.util.Calendar)) - failed: simple-symbol? at: [:class :spec] spec: :clojure.core.specs.alpha/quotable-import-list
+clj꞉todos.tryouts꞉> 
+java.util.Calendar
+clj꞉todos.tryouts꞉> 
+0
+clj꞉todos.tryouts꞉> 
+"/home/sergei/yandex-cloud/bin:/opt/gradle/gradle-7.4.2/bin:/opt/gradle/gradle-7.4.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin"
+clj꞉todos.tryouts꞉> 
+"/home/sergei/yandex-cloud/bin:/opt/gradle/gradle-7.4.2/bin:/opt/gradle/gradle-7.4.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin"
+clj꞉todos.tryouts꞉> 
+java.util.Random
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/rnd
+clj꞉todos.tryouts꞉> 
+661868943
+clj꞉todos.tryouts꞉> 
+-1233384369
+clj꞉todos.tryouts꞉> 
+989796454
+clj꞉todos.tryouts꞉> 
+1531432942
+clj꞉todos.tryouts꞉> 
+-46763323
+clj꞉todos.tryouts꞉> 
+-311114724
+clj꞉todos.tryouts꞉> 
+7
+clj꞉todos.tryouts꞉> 
+1
+clj꞉todos.tryouts꞉> 
+9
+clj꞉todos.tryouts꞉> 
+4
+clj꞉todos.tryouts꞉> 
+7
+clj꞉todos.tryouts꞉> 
+0
+clj꞉todos.tryouts꞉> 
+3
+clj꞉todos.tryouts꞉> 
+9
+clj꞉todos.tryouts꞉> 
+5
+clj꞉todos.tryouts꞉> 
+7
+clj꞉todos.tryouts꞉> 
+1
+clj꞉todos.tryouts꞉> 
+0
+clj꞉todos.tryouts꞉> 
+0
+clj꞉todos.tryouts꞉> 
+3
+clj꞉todos.tryouts꞉> 
+8
+clj꞉todos.tryouts꞉> 
+8
+clj꞉todos.tryouts꞉> 
+6
+clj꞉todos.tryouts꞉> 
+"Kyrgyzstan Time"
+clj꞉todos.tryouts꞉> 
+"Kyrgyzstan Time"
+clj꞉todos.tryouts꞉> 
+"Kyrgyzstan Time"
+clj꞉todos.tryouts꞉> 
+"Kyrgyzstan Time"
+clj꞉todos.tryouts꞉> 
+; Syntax error compiling at (tryouts.clj:875:3).
+; No such namespace: TimeZone
+clj꞉todos.tryouts꞉> 
