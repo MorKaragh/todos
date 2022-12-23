@@ -682,7 +682,7 @@
     (assoc typez
            clojure.lang.PersistentArrayMap (fn [x] "Map")))
 
-  (poly-func-2 {})
+  (poly-func-2 {}) 
 
   (defn map-type-namer [obj]
     (condp = (type obj)
@@ -872,7 +872,180 @@
   
   (. (. (Calendar/getInstance) (getTimeZone) ) (getDisplayName)) 
   (.. (Calendar/getInstance) getTimeZone getDisplayName)
-   
+
+  (import '(java.util Calendar))
+  
+  (defn the-past-midnight []
+    (let [calendar-obj (Calendar/getInstance)]
+      (.set calendar-obj Calendar/AM_PM Calendar/AM)
+      (.set calendar-obj Calendar/HOUR 0)
+      (.set calendar-obj Calendar/MINUTE 0)
+      (.set calendar-obj Calendar/SECOND 0)
+      (.set calendar-obj Calendar/MILLISECOND 0)
+      (.getTime calendar-obj)))
+  (the-past-midnight)
+  
+  (defn short-past-midnight []
+    (let [calendar-obj (Calendar/getInstance)]
+      (doto calendar-obj
+        (.set Calendar/AM_PM Calendar/AM)
+        (.set Calendar/HOUR 0)
+        (.set Calendar/MINUTE 0)
+        (.set Calendar/SECOND 0)
+        (.set Calendar/MILLISECOND 0))
+      (.getTime calendar-obj)))
+  (short-past-midnight)
+  
+  (set! *warn-on-reflection* true)
+  (time (count (map #(.getBytes %) (map #(str %) (range 0 100000))))) 
+  (time (count (map (memfn ^String getBytes) (map #(str %) (range 0 100000)))))
+
+  ((memfn ^String subSequence ^Long start ^Long end) "Clojure" 2 5)
+  
+  (bean (Calendar/getInstance))
+  
+  (def tokens (.split "what.the.fuck" "\\."))
+  (type tokens)
+  (alength tokens)
+  (aget tokens 2)
+  (aset tokens 2 "lol")
+  
+  (def arra (to-array [1 2 3]))
+  (aset arra 2 2) 
+  ;; mutable!
+  
+  (def arra-2d (to-array-2d [[1 2 3] [4 5 6] [7 8 9]]))
+  (aget arra-2d 2 0)
+  
+  (def marra (into-array {:a 1
+                          :b 2})) 
+  
+  (import 'java.awt.event.MouseAdapter)
+  (proxy [MouseAdapter] []
+    (mousePressed [event]
+      (println "Hey!")))
+  
+  (reify java.io.FileFilter
+    (accept [this f]
+      (.isDirectory f)))
+  
+  
+  (def all-users (ref {}))
+  (deref all-users)
+  @all-users
+  
+  (dosync
+   (ref-set all-users {}))
+  
+  (defn new-user [id login budget]
+    {:id             id
+     :login          login
+     :budget         budget
+     :total-expences 0})
+  
+  (defn add-new-user [login budget-amount]
+    (dosync
+     (let [current-number (count @all-users)
+           user           (new-user (inc current-number) login budget-amount)]
+       (alter all-users assoc login user))))
+  
+  (add-new-user "first" 10000)
+  (add-new-user "second" 20000)
+  
+  (def total-cpu-time (agent 0))
+  @total-cpu-time
+  
+  (send total-cpu-time + 100)
+
+  (defn slow-move [x y]
+    (println "slowing down..." x y)
+    (doseq [x (range 1 99999999)])
+    (* 1 y))
+  
+  (def agent-one (agent 30))
+  (def agent-two (agent 20))
+  (def agent-three (agent 10))
+
+  (defn try-agents []
+    (let [x 100]
+      (send agent-one slow-move x)
+      (send agent-two slow-move 50)
+      (send agent-three slow-move 20))
+    (await-for 500000 agent-one agent-two agent-three))
+  
+  (try-agents)
+  (slow-move 1 2) 
+  
+  (def bad-agent (agent 1))
+  (send bad-agent / 0)
+  @bad-agent
+  (send bad-agent / 2)
+  (agent-error bad-agent) 
+  
+  (let [e  (agent-error bad-agent)
+        st (.getStackTrace e)]
+    (println (.getMessage e))
+    (println (clojure.string/join "\n" st)))
+  
+  (restart-agent bad-agent 1)
+  
+  ;; агент внутри транзакции выполнится один раз, хотя
+  ;; сама транзакция может повторяться
+  
+  ;; (dosync
+  ;;  (send agent-one log-message args-one)
+  ;;  (send-off agent-two send-message-on-queue args-two)
+  ;;  (alter a-ref ref-function)
+  ;;  (some-pure-function args-three))
+  
+  (def total-smth (atom {"one" 1
+                         "two" 2}))
+  @total-smth
+  (reset! total-smth "newval")
+  (swap! total-smth str "-add")
+  (compare-and-set! total-smth "newval-add" "replaced-val")
+  
+  (def almost-rand-nums (atom ""))
+  (reset! almost-rand-nums "")
+  @almost-rand-nums
+  
+  (defn add-val-to-atom [x]
+    (swap! almost-rand-nums str x))
+  (add-val-to-atom 1)
+  
+  (map (fn [x] (swap! almost-rand-nums str x)) (range 1 10))
+  
+  
+  (def listened-atom (atom ""))
+  (add-watch listened-atom :lislistener 
+             (fn [ke re ol ne] (println (str "ke " ke "re " re "ol " ol "ne " ne)))) 
+  (swap! listened-atom str "op")
+  (reset! listened-atom "")
+  (remove-watch listened-atom :lislistener)
+  
+  
+  (defn long-func [x]
+    (Thread/sleep 5000)
+    (* x x ))
+  
+  (defn calc-faster []
+    (let [x (future (long-func 2))
+          y (future (long-func 4))
+          z (future (long-func 8))]
+      (str @x @y @z)))
+  
+  (time (calc-faster))
+  
+  
+  (def prom (promise))
+  ;; never run this in REPL! (def prom-val (deref prom))
+  
+  (let [p (promise)]
+    (future (Thread/sleep 5000)
+            (deliver p :done))
+    @p)
+  
+  
   
   
   )
