@@ -1,0 +1,551 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉todos.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉todos.core꞉> 
+; Syntax error compiling at (tryouts.clj:1049:14).
+; Unable to resolve symbol: ref in this context
+clj꞉todos.tryouts꞉> 
+[]
+[9]
+[9 8]
+[9 8 7]
+[9 8 7 6]
+[9 8 7 6 5]
+[9 8 7 6 5 4]
+[9 8 7 6 5 4 3]
+[9 8 7 6 5 4 3 2]
+[9 8 7 6 5 4 3 2 1]
+nil
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/a-ref
+clj꞉todos.tryouts꞉> 
+; Execution error (IllegalStateException) at todos.tryouts/eval7817 (form-init3052882239317645343.clj:1051).
+; No transaction running
+clj꞉todos.tryouts꞉> 
+1
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/sync-set
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/sync-set
+clj꞉todos.tryouts꞉> 
+10
+clj꞉todos.tryouts꞉> 
+10
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/exhibits-oddity?
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/unless
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/exhibits-oddity-2?
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/exhibits-oddity-2?
+clj꞉todos.tryouts꞉> 
+Very odd!
+nil
+clj꞉todos.tryouts꞉> 
+Very odd!
+nil
+clj꞉todos.tryouts꞉> 
+Very odd!
+nil
+clj꞉todos.tryouts꞉> 
+Very odd!
+nil
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/unless?
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/unless
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/exhibits-oddity-correct?
+clj꞉todos.tryouts꞉> 
+Very odd indeed!
+nil
+clj꞉todos.tryouts꞉> 
+nil
+clj꞉todos.tryouts꞉> 
+#function[todos.tryouts/exhibits-oddity-correct?]
+clj꞉todos.tryouts꞉> 
+(if (not (even? x)) (println "Very odd, indeed!"))
+clj꞉todos.tryouts꞉> 
+(if x nil (do))
+clj꞉todos.tryouts꞉> 
+"greatx is oddy is even"
+clj꞉todos.tryouts꞉> 
+(2 3 4 5 11)
+clj꞉todos.tryouts꞉> 
+(let* [<> {"a" [1 2 3 4]} <> (<> "a") <> (conj <> 10)] (map inc <>))
+clj꞉todos.tryouts꞉> 
+(let* [<> {"a" [1 2 3 4]} <> (<> "a") <> (conj <> 10)] (map inc <>))
+clj꞉todos.tryouts꞉> 
+(let* [<> {"a" [1 2 3 4]} <> (<> "a") <> (conj <> 10)] (map inc <>))
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/exhibits-oddity-again
+clj꞉todos.tryouts꞉> 
+Odd
+Yes, Odd
+nil
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/unless-comm
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/unless-multi
+clj꞉todos.tryouts꞉> 
+; Syntax error (ArityException) compiling at (tryouts.clj:1108:5).
+; Wrong number of args (3) passed to: todos.tryouts/unless-multi
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/unless-multi
+clj꞉todos.tryouts꞉> 
+; Syntax error (ArityException) compiling at (tryouts.clj:1108:5).
+; Wrong number of args (3) passed to: todos.tryouts/unless-multi
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/unless-multi
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/exhibits-oddity-multi-wrong
+clj꞉todos.tryouts꞉> 
+Odd
+Yezz Odd
+; Execution error (NullPointerException) at todos.tryouts/exhibits-oddity-multi-wrong (form-init3052882239317645343.clj:1108).
+; null
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/unless-multi-corr
+clj꞉todos.tryouts꞉> 
+(if (clojure.core/not 11) (do))
+clj꞉todos.tryouts꞉> 
+(if (clojure.core/not 11) (do (str 1)))
+clj꞉todos.tryouts꞉> 
+(if (clojure.core/not 11) (do (str 1) (str 2)))
+clj꞉todos.tryouts꞉> 
+(unless-multi-wrong 11 (str 1) (str 2))
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/unless-multi-wrong
+clj꞉todos.tryouts꞉> 
+(if (clojure.core/not 11) (do ((str 1) (str 2))))
+clj꞉todos.tryouts꞉> 
+(if (clojure.core/not 11) (do (str 1) (str 2)))
+clj꞉todos.tryouts꞉> 
+(if (clojure.core/not 11) (do ((str 1) (str 2))))
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/mac-with-name
+clj꞉todos.tryouts꞉> 
+; Syntax error compiling at (tryouts.clj:1132:3).
+; Unable to resolve symbol: def-with-name in this context
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/def-with-name
+clj꞉todos.tryouts꞉> 
+; Syntax error macroexpanding clojure.core/let at (tryouts.clj:1136:3).
+; todos.tryouts/now - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+; todos.tryouts/now - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+; todos.tryouts/now - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+; todos.tryouts/now - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉todos.tryouts꞉> 
+; Syntax error macroexpanding clojure.core/let at (tryouts.clj:1132:3).
+; todos.tryouts/now - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+; todos.tryouts/now - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+; todos.tryouts/now - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+; todos.tryouts/now - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉todos.tryouts꞉> 
+; Syntax error macroexpanding clojure.core/defn at (tryouts.clj:1132:3).
+; todos.tryouts/saysome - failed: simple-symbol? at: [:fn-name] spec: :clojure.core.specs.alpha/defn-args
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/def-with-name
+clj꞉todos.tryouts꞉> 
+; Syntax error macroexpanding clojure.core/defn at (tryouts.clj:1132:3).
+; todos.tryouts/saysome - failed: simple-symbol? at: [:fn-name] spec: :clojure.core.specs.alpha/defn-args
+clj꞉todos.tryouts꞉> 
+(def
+ saysome
+ (clojure.core/fn
+  ([x]
+   (clojure.core/let
+    [todos.tryouts/now (java.lang.System/currentTimeMillis)]
+    (clojure.core/println "[" todos.tryouts/now "] call to " (clojure.core/str #'saysome))
+    ((println "some is " x))))))
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/def-with-name
+clj꞉todos.tryouts꞉> 
+; Syntax error compiling at (tryouts.clj:1132:3).
+; No such var: todos.tryouts/now
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/def-with-name
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/hello-named
+clj꞉todos.tryouts꞉> 
+[ 1671982165027 ] call to  #'todos.tryouts/hello-named
+named is  12
+; Execution error (NullPointerException) at todos.tryouts/hello-named (form-init3052882239317645343.clj:1132).
+; null
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/hello-named
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/hello-named
+clj꞉todos.tryouts꞉> 
+[ 1671982240777 ] call to  #'todos.tryouts/hello-named
+named is  12
+; Execution error (NullPointerException) at todos.tryouts/hello-named (form-init3052882239317645343.clj:1133).
+; null
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/def-with-name
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/hello-named
+clj꞉todos.tryouts꞉> 
+[ 1671982277051 ] call to  #'todos.tryouts/hello-named
+named is  12
+nil
+clj꞉todos.tryouts꞉> 
+nil
+clj꞉todos.tryouts꞉> 
+nil
+clj꞉todos.tryouts꞉> 
+nil
+clj꞉todos.tryouts꞉> 
+(def
+ saysome
+ (clojure.core/fn
+  ([x]
+   (clojure.core/let
+    [now__7977__auto__ (java.lang.System/currentTimeMillis)]
+    (clojure.core/println "[" now__7977__auto__ "] call to " (clojure.core/str #'saysome))
+    (println "some is " x)))))
+clj꞉todos.tryouts꞉> 
+nil
+clj꞉todos.tryouts꞉> 
+nil
+clj꞉todos.tryouts꞉> 
+(do (def add) (def multiply) (def subtract) (def divide))
+clj꞉todos.tryouts꞉> 
+(do (def add) (def multiply) (def subtract) (def divide))
+clj꞉todos.tryouts꞉> 
+; Execution error (ArityException) at todos.tryouts/eval8001 (form-init3052882239317645343.clj:1145).
+; Wrong number of args (1) passed to: clojure.core/defonce
+clj꞉todos.tryouts꞉> 
+(let* [v__6729__auto__ (def x)] (clojure.core/when-not (.hasRoot v__6729__auto__) (def x 15)))
+clj꞉todos.tryouts꞉> 
+(do (def add) (def multiply) (def subtract) (def divide))
+clj꞉todos.tryouts꞉> 
+(let* [and__5499__auto__ x] (if and__5499__auto__ (clojure.core/and y z) and__5499__auto__))
+clj꞉todos.tryouts꞉> 
+(let*
+ [start__6121__auto__ (. java.lang.System (clojure.core/nanoTime)) ret__6122__auto__ (* 1 2)]
+ (clojure.core/prn
+  (clojure.core/str
+   "Elapsed time: "
+   (clojure.core//
+    (clojure.core/double (clojure.core/- (. java.lang.System (clojure.core/nanoTime)) start__6121__auto__))
+    1000000.0)
+   " msecs"))
+ ret__6122__auto__)
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/infix
+clj꞉todos.tryouts꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (3) passed to: todos.tryouts/infix
+clj꞉todos.tryouts꞉> 
+-1
+clj꞉todos.tryouts꞉> 
+; Syntax error reading source at (REPL:1152:14).
+; Invalid number: 2-3
+clj꞉todos.tryouts꞉> 
+-1
+clj꞉todos.tryouts꞉> 
+-1
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/randomly
+clj꞉todos.tryouts꞉> 
+(if (= 1 0) (println "hello") (clojure.core/cond (= 1 1) (println "world")))
+clj꞉todos.tryouts꞉> 
+(if (= 1 0) (println "hello") (clojure.core/cond (= 1 1) (println "my") (= 1 2) (println "world")))
+clj꞉todos.tryouts꞉> 
+(clojure.core/cond (= 0 0) (println "hello") (= 0 1) (println "my") (= 0 2) (println "world"))
+clj꞉todos.tryouts꞉> 
+(clojure.core/cond (= 0 0) (println "hello") (= 0 1) (println "my") (= 0 2) (println "world"))
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/randomly-2
+clj꞉todos.tryouts꞉> 
+(clojure.core/case (clojure.core/rand-int 3) 0 (println "hello") 1 (println "my") 2 (println "world"))
+clj꞉todos.tryouts꞉> 
+; WARNING: compare already refers to: #'clojure.core/compare in namespace: todos.tryouts, being replaced by: #'todos.tryouts/compare
+; 
+; WARNING: cat already refers to: #'clojure.core/cat in namespace: todos.tryouts, being replaced by: #'todos.tryouts/cat
+; 
+; WARNING: vals already refers to: #'clojure.core/vals in namespace: todos.tryouts, being replaced by: #'todos.tryouts/vals
+; 
+; Syntax error compiling at (tryouts.clj:599:3).
+; No such namespace: json-lib
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/check-auth
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/login-user-pre
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/requezt
+clj꞉todos.tryouts꞉> 
+"Hello, Stepan"
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/defwebmethod
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/login-user
+clj꞉todos.tryouts꞉> 
+; Execution error (ArityException) at todos.tryouts/eval8329 (form-init3052882239317645343.clj:1206).
+; Wrong number of args (2) passed to: todos.tryouts/login-user
+clj꞉todos.tryouts꞉> 
+"Welcome, Stepan, 123 is still correct!"
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/defnn
+clj꞉todos.tryouts꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (5) passed to: todos.tryouts/defnn
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/defnn
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/print-details
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/defnn
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/print-details
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/print-details
+clj꞉todos.tryouts꞉> 
+#'todos.destruct/person
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-person
+clj꞉todos.destruct꞉> 
+#'todos.destruct/person-no-age
+clj꞉todos.destruct꞉> 
+Person  Stepan  is of age  15
+nil
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-person
+clj꞉todos.destruct꞉> 
+"Person Stepan is of age 15"
+clj꞉todos.destruct꞉> 
+"Person Stepan is of age 15"
+clj꞉todos.destruct꞉> 
+"Person Stepan is of age 15"
+clj꞉todos.destruct꞉> 
+#'todos.destruct/person
+clj꞉todos.destruct꞉> 
+#'todos.destruct/person-no-age
+clj꞉todos.destruct꞉> 
+"Person Stepan is of age 15"
+clj꞉todos.destruct꞉> 
+"Person Stepan is of age 25"
+clj꞉todos.destruct꞉> 
+; Syntax error compiling def at (destruct.clj:17:1).
+; Too many arguments to def
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals-1
+clj꞉todos.destruct꞉> 
+; Execution error (UnsupportedOperationException) at todos.destruct/print-vals (form-init3052882239317645343.clj:17).
+; nth not supported on this type: Long
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+"clojure.core$first__5369@6395e07aclojure.core$second__5377@69d61ecd"
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+; Execution error (ArityException) at todos.destruct/eval8437 (form-init3052882239317645343.clj:23).
+; Wrong number of args (1) passed to: todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+; Execution error (ArityException) at todos.destruct/eval8440 (form-init3052882239317645343.clj:23).
+; Wrong number of args (1) passed to: todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+"clojure.core$first__5369@6395e07aclojure.core$second__5377@69d61ecd"
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+#function[clojure.core/first--5369] #function[clojure.core/second--5377]
+nil
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-amounts-multiple
+clj꞉todos.destruct꞉> 
+Amounts are: 1 , 2 and (3)
+nil
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-amounts-multiple
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+1 2
+nil
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+1 2
+(3)
+nil
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals-1
+clj꞉todos.destruct꞉> 
+"clojure.core$first__5369@6395e07aclojure.core$second__5377@69d61ecd"
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals-1
+clj꞉todos.destruct꞉> 
+"clojure.core$first__5369@6395e07aclojure.core$second__5377@69d61ecd"
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals-1
+clj꞉todos.destruct꞉> 
+"clojure.core$first__5369@6395e07aclojure.core$second__5377@69d61ecd"
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-first-category
+clj꞉todos.destruct꞉> 
+First category was: :category
+First amount was: Lol
+nil
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals-1
+clj꞉todos.destruct꞉> 
+"clojure.core$first__5369@6395e07aclojure.core$second__5377@69d61ecd"
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals-1
+clj꞉todos.destruct꞉> 
+"KickLol"
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals-1
+clj꞉todos.destruct꞉> 
+First category was: :category
+First amount was: Lol
+nil
+clj꞉todos.destruct꞉> 
+First category was: :category
+First amount was: Lol
+nil
+clj꞉todos.destruct꞉> 
+"KickLol"
+clj꞉todos.destruct꞉> 
+"KickLol"
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals-1
+clj꞉todos.destruct꞉> 
+; Syntax error macroexpanding clojure.core/defn at (destruct.clj:28:1).
+; (& remaining :as all) - failed: Extra input at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
+; ([[first second] & _ & remaining :as all]) - failed: Extra input at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-amounts-multiple
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-vals
+clj꞉todos.destruct꞉> 
+1 2
+[1 2 3]
+nil
+clj꞉todos.destruct꞉> 
+"Person Stepan is of age 15"
+clj꞉todos.destruct꞉> 
+"Person Stepan is of age 25"
+clj꞉todos.destruct꞉> 
+#'todos.destruct/print-person
+clj꞉todos.destruct꞉> 
+"Person Stepan is of age 25"
+clj꞉todos.destruct꞉> 
+#'todos.tryouts/square
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/square-all
+clj꞉todos.tryouts꞉> 
+(1 4 9 16)
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/do-to-all
+clj꞉todos.tryouts꞉> 
+(1 4 9 16)
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/do-to-all-dang
+clj꞉todos.tryouts꞉> 
+(1 4 9 16)
+clj꞉todos.tryouts꞉> 
+; Syntax error compiling at (tryouts.clj:1246:10).
+; Unable to resolve symbol: nums in this context
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/do-to-all
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/do-to-all
+clj꞉todos.tryouts꞉> 
+(100000000)
+clj꞉todos.tryouts꞉> 
+(100000000 100020001 100040004 100060009 100080016 100100025 100120036 100140049 100160064 100180081)
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/total-of
+clj꞉todos.tryouts꞉> 
+6
+clj꞉todos.tryouts꞉> 
+10
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/larger-of
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/largest-of
+clj꞉todos.tryouts꞉> 
+3
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/compute-across
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/total-of-2
+clj꞉todos.tryouts꞉> 
+6
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/max-of
+clj꞉todos.tryouts꞉> 
+3
+clj꞉todos.tryouts꞉> 
+6
+clj꞉todos.tryouts꞉> 
+3
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/all-greater-then
+clj꞉todos.tryouts꞉> 
+[1 2 4 5 6 7 8]
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/all-greater-then
+clj꞉todos.tryouts꞉> 
+; Execution error (ArityException) at todos.tryouts/all-greater-then$fn (form-init3052882239317645343.clj:1288).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/all-greater-than
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/all-greater-then
+clj꞉todos.tryouts꞉> 
+[6 7 8]
+clj꞉todos.tryouts꞉> 
+[]
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/all-greater-than-my
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/all-less-than-my
+clj꞉todos.tryouts꞉> 
+[1]
+clj꞉todos.tryouts꞉> 
+[1 3]
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/select-if
+clj꞉todos.tryouts꞉> 
+; Execution error (ArityException) at todos.tryouts/select-if$fn (form-init3052882239317645343.clj:1304).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/select-if
+clj꞉todos.tryouts꞉> 
+; Execution error (ArityException) at todos.tryouts/select-if$fn (form-init3052882239317645343.clj:1304).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉todos.tryouts꞉> 
+#'todos.tryouts/select-if
+clj꞉todos.tryouts꞉> 
+[1 3 5]
+clj꞉todos.tryouts꞉> 
