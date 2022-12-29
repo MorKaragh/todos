@@ -682,7 +682,7 @@
     (assoc typez
            clojure.lang.PersistentArrayMap (fn [x] "Map")))
 
-  (poly-func-2 {}) 
+  (poly-func-2 {})
 
   (defn map-type-namer [obj]
     (condp = (type obj)
@@ -851,30 +851,30 @@
   (import '(java.text SimpleDateFormat))
   (def sdf (new SimpleDateFormat "yyyy-MM-dd"))
   (def sdf-2 (SimpleDateFormat. "yyyy-MM-dd"))
-  
+
   (defn parse-date [date]
     (let [sdf (SimpleDateFormat. "dd.MM.yyyy")]
       (.parse sdf date)))
-  
+
   (parse-date "14.01.1987")
-  
+
   (Long/parseLong "123321")
-  
+
   (import '(java.util Calendar))
   Calendar/JANUARY
-  
+
   (. System (getenv "PATH"))
   (. System getenv "PATH")
-  
+
   (import '(java.util Random))
   (def rnd (Random.))
   (. rnd nextInt 10)
-  
-  (. (. (Calendar/getInstance) (getTimeZone) ) (getDisplayName)) 
+
+  (. (. (Calendar/getInstance) (getTimeZone)) (getDisplayName))
   (.. (Calendar/getInstance) getTimeZone getDisplayName)
 
   (import '(java.util Calendar))
-  
+
   (defn the-past-midnight []
     (let [calendar-obj (Calendar/getInstance)]
       (.set calendar-obj Calendar/AM_PM Calendar/AM)
@@ -884,7 +884,7 @@
       (.set calendar-obj Calendar/MILLISECOND 0)
       (.getTime calendar-obj)))
   (the-past-midnight)
-  
+
   (defn short-past-midnight []
     (let [calendar-obj (Calendar/getInstance)]
       (doto calendar-obj
@@ -895,73 +895,73 @@
         (.set Calendar/MILLISECOND 0))
       (.getTime calendar-obj)))
   (short-past-midnight)
-  
+
   (set! *warn-on-reflection* true)
-  (time (count (map #(.getBytes %) (map #(str %) (range 0 100000))))) 
+  (time (count (map #(.getBytes %) (map #(str %) (range 0 100000)))))
   (time (count (map (memfn ^String getBytes) (map #(str %) (range 0 100000)))))
 
   ((memfn ^String subSequence ^Long start ^Long end) "Clojure" 2 5)
-  
+
   (bean (Calendar/getInstance))
-  
+
   (def tokens (.split "what.the.fuck" "\\."))
   (type tokens)
   (alength tokens)
   (aget tokens 2)
   (aset tokens 2 "lol")
-  
+
   (def arra (to-array [1 2 3]))
-  (aset arra 2 2) 
+  (aset arra 2 2)
   ;; mutable!
   
   (def arra-2d (to-array-2d [[1 2 3] [4 5 6] [7 8 9]]))
   (aget arra-2d 2 0)
-  
+
   (def marra (into-array {:a 1
-                          :b 2})) 
-  
+                          :b 2}))
+
   (import 'java.awt.event.MouseAdapter)
   (proxy [MouseAdapter] []
     (mousePressed [event]
       (println "Hey!")))
-  
+
   (reify java.io.FileFilter
     (accept [this f]
       (.isDirectory f)))
-  
-  
+
+
   (def all-users (ref {}))
   (deref all-users)
   @all-users
-  
+
   (dosync
    (ref-set all-users {}))
-  
+
   (defn new-user [id login budget]
     {:id             id
      :login          login
      :budget         budget
      :total-expences 0})
-  
+
   (defn add-new-user [login budget-amount]
     (dosync
      (let [current-number (count @all-users)
            user           (new-user (inc current-number) login budget-amount)]
        (alter all-users assoc login user))))
-  
+
   (add-new-user "first" 10000)
   (add-new-user "second" 20000)
-  
+
   (def total-cpu-time (agent 0))
   @total-cpu-time
-  
+
   (send total-cpu-time + 100)
 
   (defn slow-move [x y]
     (println "slowing down..." x y)
     (doseq [x (range 1 99999999)])
     (* 1 y))
-  
+
   (def agent-one (agent 30))
   (def agent-two (agent 20))
   (def agent-three (agent 10))
@@ -972,23 +972,23 @@
       (send agent-two slow-move 50)
       (send agent-three slow-move 20))
     (await-for 500000 agent-one agent-two agent-three))
-  
+
   (try-agents)
-  (slow-move 1 2) 
-  
+  (slow-move 1 2)
+
   (def bad-agent (agent 1))
   (send bad-agent / 0)
   @bad-agent
   (send bad-agent / 2)
-  (agent-error bad-agent) 
-  
+  (agent-error bad-agent)
+
   (let [e  (agent-error bad-agent)
         st (.getStackTrace e)]
     (println (.getMessage e))
     (println (clojure.string/join "\n" st)))
-  
+
   (restart-agent bad-agent 1)
-  
+
   ;; агент внутри транзакции выполнится один раз, хотя
   ;; сама транзакция может повторяться
   
@@ -1004,39 +1004,39 @@
   (reset! total-smth "newval")
   (swap! total-smth str "-add")
   (compare-and-set! total-smth "newval-add" "replaced-val")
-  
+
   (def almost-rand-nums (atom ""))
   (reset! almost-rand-nums "")
   @almost-rand-nums
-  
+
   (defn add-val-to-atom [x]
     (swap! almost-rand-nums str x))
   (add-val-to-atom 1)
-  
+
   (map (fn [x] (swap! almost-rand-nums str x)) (range 1 10))
-  
-  
+
+
   (def listened-atom (atom ""))
-  (add-watch listened-atom :lislistener 
-             (fn [ke re ol ne] (println (str "ke " ke "re " re "ol " ol "ne " ne)))) 
+  (add-watch listened-atom :lislistener
+             (fn [ke re ol ne] (println (str "ke " ke "re " re "ol " ol "ne " ne))))
   (swap! listened-atom str "op")
   (reset! listened-atom "")
   (remove-watch listened-atom :lislistener)
-  
-  
+
+
   (defn long-func [x]
     (Thread/sleep 5000)
-    (* x x ))
-  
+    (* x x))
+
   (defn calc-faster []
     (let [x (future (long-func 2))
           y (future (long-func 4))
           z (future (long-func 8))]
       (str @x @y @z)))
-  
+
   (time (calc-faster))
-  
-  
+
+
   (def prom (promise))
   ;; never run this in REPL! (def prom-val (deref prom))
   
@@ -1044,9 +1044,267 @@
     (future (Thread/sleep 5000)
             (deliver p :done))
     @p)
+
+
+  (def a-ref (ref 0))
+
+  (dosync
+   (ref-set a-ref 1))
+
+  (defmacro sync-set [r v]
+    (list 'dosync
+          (list 'ref-set r v)))
+
+  (sync-set a-ref 10)
+  @a-ref
+
+  (defn exhibits-oddity? [x]
+    (if (odd? x)
+      (println "Very odd!")))
+
+  (defn unless-func [test then]
+    (if (not test)
+      then))
+
+  (defn exhibits-oddity-2? [x]
+    (unless-func (even? x)
+                 (println "Very odd indeed!")))
+
+  (exhibits-oddity-2? 10)
+  ;; работает не корректно, т.к. функция unless выполняет параметры прежде всего
+  
+  (defmacro unless [test then]
+    (list 'if (list 'not test)
+          then))
+
+  (defmacro unless-comm [test then]
+    `(if (not ~test)
+       ~then))
+
+  (defn exhibits-oddity-correct? [x]
+    (unless (even? x)
+            (println "Very odd indeed!")))
+
+  (exhibits-oddity-correct? 10)
+
+  (macroexpand
+   '(when-not x))
+
+  (macroexpand
+   '(unless (even? x) (println "Very odd, indeed!")))
+
+  (defn exhibits-oddity-again [x]
+    (unless (even? x)
+            (do
+              (println "Odd")
+              (println "Yes, Odd"))))
+  (exhibits-oddity-again 11)
+
+  (defmacro unless-multi-corr [test & exprs]
+    `(if (not ~test)
+       (do ~@exprs)))
+
+  (defmacro unless-multi-wrong [test & then]
+    `(if (not ~test)
+       (do ~then)))
+
+  ;; развернется в (if (clojure.core/not 11) (do (str 1) (str 2)))
+  (macroexpand
+   '(unless-multi-corr 11 (str 1) (str 2)))
+
+  ;; а тут будут лишние скобки (if (clojure.core/not 11) (do ((str 1) (str 2))))
+  (macroexpand
+   '(unless-multi-wrong 11 (str 1) (str 2)))
+
+  (defn exhibits-oddity-multi-wrong [x]
+    (unless-multi-wrong (even? x)
+                        (println "Odd")
+                        (println "Yezz Odd")))
+  (exhibits-oddity-multi-wrong 11) ;; NPE изза лишних скобок
+  
+
+  ;; now# надо использовать чтобы не путаться в именах
+  ;; это свойственно для лиспов, проблема "variable capture"
+  (defmacro def-with-name [fn-name args & body]
+    `(defn ~fn-name ~args
+       (let [now# (System/currentTimeMillis)]
+         (println "[" now# "] call to " (str (var ~fn-name)))
+         ~@body)))
+
+  (declare hello-named)
+  (def-with-name hello-named [x]
+    (println "named is " x))
+
+  (hello-named 12)
+
+  (macroexpand '(def-with-name saysome [x]
+                  (println "some is " x)))
+
+  (macroexpand '(declare add multiply subtract divide))
+  (macroexpand '(defonce x 15))
+  (macroexpand '(and x y z))
+  (macroexpand '(time (* 1 2)))
+
+  (defmacro infix [expr]
+    (let [[left op right] expr]
+      (list op left right)))
+
+  (infix #_{:clj-kondo/ignore [:not-a-function]}
+         (2 - 3))
+
+  (defmacro randomly [& exprs]
+    (let [len        (count exprs)
+          index      (rand-int len)
+          conditions (map #(list '= index %) (range len))]
+      `(cond ~@(interleave conditions exprs))))
+
+  (macroexpand-1 '(randomly (println "hello") 
+                            (println "my") 
+                            (println "world")))
+
+  (clojure.core/cond (= 0 0) (println "hello") 
+                     (= 0 1) (println "my") 
+                     (= 0 2) (println "world"))
+
+  (defmacro randomly-2 [& exprs]
+    (let [c (count exprs)]
+      `(case (rand-int ~c) ~@(interleave (range c) exprs))))
   
   
+  (macroexpand-1 '(randomly-2 (println "hello")
+                              (println "my")
+                              (println "world")))
   
+  (clojure.core/case (clojure.core/rand-int 3) 
+    0 (println "hello") 
+    1 (println "my") 
+    2 (println "world"))
+
+  (defn check-auth [usr pass]
+    true)
+  
+  (defn login-user-pre [request]
+    (let [username (:username request)
+          password (:password request)]
+      (if (check-auth username password)
+        (str "Hello, " username)
+        (str "Login failed!"))))
+  
+  (def requezt {:username "Stepan"
+                :password "123"})
+  
+  (login-user-pre requezt)
+  
+  (defmacro defwebmethod [name args & exprs]
+    `(defn ~name [{:keys ~args}]
+       ~@exprs))
+  
+  (defwebmethod login-user [username password]
+    (if (check-auth username password)
+      (str "Welcome, " username ", " password " is still correct!")
+      (str "Login failed!")))
+  
+  #_{:clj-kondo/ignore [:invalid-arity]}
+  (login-user requezt)
+  
+  (defmacro defnn [fname [& names] & body]
+    (let [ks {:keys (vec names)}]
+      `(defn ~fname [& {:as arg-map#}]
+         (let [~ks arg-map#]
+           ~@body))))
+  
+  
+  #_{:clj-kondo/ignore [:unresolved-symbol]}
+  (defnn print-details [name salary start-date]
+    (println "Name:" name)
+    (println "Salary:" salary)
+    (println "Started on:" start-date))
+  
+  
+  (defn square [x]
+    (* x x))
+  
+  (defn square-all [nums]
+    (if (empty? nums)
+      nil
+      (cons (square (first nums))
+            (square-all (rest nums)))))
+  
+  (square-all [1 2 3 4])
+  
+  ;; can throw stackoverflow
+  (defn do-to-all-dang [f nums]
+    (if (empty? nums)
+      nil
+      (cons (f (first nums))
+            (do-to-all-dang f (rest nums)))))
+  
+  (do-to-all-dang square [1 2 3 4])
+  
+  ;; lazy, does not throw stackoverflow
+  (defn do-to-all [f nums]
+    (lazy-seq
+     (if (empty? nums)
+       nil
+       (cons (f (first nums))
+             (do-to-all f (rest nums))))))
+  
+  (drop 10000 (do-to-all square (range 10010)))
+  
+  
+  (defn total-of [numbers]
+    (loop [nums numbers
+           sum  0]
+      (if (empty? nums)
+        sum
+        (recur (rest nums) (+ sum (first nums))))))
+  
+  (total-of [1 2 3 4])
+  
+  (defn larger-of [x y]
+    (if (> x y) x y))
+  
+  (defn largest-of [numbers]
+    (loop [nums      numbers
+           candidate (first numbers)]
+      (if (empty? nums)
+        candidate
+        (recur (rest nums) (larger-of candidate (first nums))))))
+  
+  (largest-of [1 2 3])
+  
+  (defn compute-across [func elements value]
+    (if (empty? elements)
+      value
+      (recur func (rest elements) (func value (first elements)))))
+  
+  (defn total-of-2 [numbers]
+    (compute-across + numbers 0))
+  (defn max-of [numbers]
+    (compute-across larger-of numbers (first numbers))) 
+  
+  (max-of [1 2 3])
+  (total-of-2 [1 2 3])
+  
+  (defn all-greater-than-my [threshold numbers]
+    (compute-across #(if (> %2 threshold) (conj %1 %2) %1) numbers []))
+  
+  (defn all-greater-then [threshold numbers]
+    (reduce #(if (> %2 threshold) (conj %1 %2) %1) [] numbers))
+  
+  (all-greater-then 5 [1 2 4 5 6 7 8])
+  (all-greater-then 5 [])
+  
+  (defn all-less-than-my [threshold numbers]
+    (compute-across #(if (< %2 threshold) (conj %1 %2) %1) numbers []))
+  
+  (all-less-than-my 5 [1 3 5 6 7])
+
+  (defn select-if [pred elements]
+    (compute-across #(if (pred %2) (conj %1 %2) %1) elements []))
+
+  (select-if odd? [1 2 3 4 5 6])
+
   
   )
 
