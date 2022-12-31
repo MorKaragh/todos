@@ -1,4 +1,4 @@
-(ns todos.atom
+(ns todos.topics.atom
   (:require [clojure.string :as str])
   (:gen-class))
 

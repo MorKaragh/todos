@@ -1,4 +1,4 @@
-(ns todos.destruct)
+(ns todos.topics.destruct)
 
 ;; выдергивание значений из мапы
 (defn print-person [{name :name
