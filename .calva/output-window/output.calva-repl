@@ -18,197 +18,178 @@
 clj꞉todos.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉todos.core꞉> 
-[1 2 3]
-clj꞉todos.problems꞉> 
-[4 5]
-clj꞉todos.problems꞉> 
-[4 5]
-clj꞉todos.problems꞉> 
-#'todos.problems/cut-by
-clj꞉todos.problems꞉> 
-#'todos.problems/cut-by
-clj꞉todos.problems꞉> 
-[1 2 3 4 5 6 7 8 9 0]
-[4 5 6 7 8 9 0]
-[7 8 9 0]
-[0]
+#'todos.topics.oopfun/method-spec
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/method-specs
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/this
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/new-object
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/find-method
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/new-class
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/defclass
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Person
+clj꞉todos.topics.oopfun꞉> 
+"Person"
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/someperson
+clj꞉todos.topics.oopfun꞉> 
+"Person"
+clj꞉todos.topics.oopfun꞉> 
+30
+clj꞉todos.topics.oopfun꞉> 
+"I was born about 32 years ago"
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/parent-class-spec
+clj꞉todos.topics.oopfun꞉> 
+"empty"
+clj꞉todos.topics.oopfun꞉> 
+"empty"
+clj꞉todos.topics.oopfun꞉> 
+empty
+clj꞉todos.topics.oopfun꞉> 
+Person
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/new-class
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/defclass
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/OBJECT
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Person
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Woman
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Lola
+clj꞉todos.topics.oopfun꞉> 
+"Hello, Shelly"
+clj꞉todos.topics.oopfun꞉> 
+; Execution error at todos.topics.oopfun$new_object$thiz__6072/doInvoke (form-init9137904393547928790.clj:34).
+; No Such Method 
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/OBJECT
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/find-method
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/new-class
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Person
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Woman
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Lola
+clj꞉todos.topics.oopfun꞉> 
+; Execution error (NullPointerException) at todos.topics.oopfun/find-method (form-init9137904393547928790.clj:39).
+; null
+clj꞉todos.topics.oopfun꞉> 
+todos.topics.oopfun/find-method (form-init9137904393547928790.clj:39)
+todos.topics.oopfun/find-method (form-init9137904393547928790.clj:38)
+todos.topics.oopfun/new-class (form-init9137904393547928790.clj:63)
+todos.topics.oopfun/new-object (form-init9137904393547928790.clj:32)
+todos.topics.oopfun/eval7980 (form-init9137904393547928790.clj:88)
+clojure.lang.Compiler/eval (Compiler.java:7176)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:414)
+clojure.main/repl (main.clj:435)
+clojure.main/repl (main.clj:345)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:218)
+nrepl.middleware.session/session-exec (session.clj:217)
+java.lang.Thread/run (Thread.java:829)
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/find-method
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/find-method
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/parent-class-spec
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/new-object
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/new-class
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/defclass
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/OBJECT
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Person
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Woman
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Lola
+clj꞉todos.topics.oopfun꞉> 
+; Execution error (NullPointerException) at todos.topics.oopfun/find-method (form-init9137904393547928790.clj:40).
+; null
+clj꞉todos.topics.oopfun꞉> 
+; Execution error (NullPointerException) at todos.topics.oopfun/find-method (form-init9137904393547928790.clj:40).
+; null
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Person
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Woman
+clj꞉todos.topics.oopfun꞉> 
+"Person"
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/someperson
+clj꞉todos.topics.oopfun꞉> 
+"Person"
+clj꞉todos.topics.oopfun꞉> 
+; Execution error (NullPointerException) at todos.topics.oopfun/find-method (form-init9137904393547928790.clj:40).
+; null
+clj꞉todos.topics.oopfun꞉> 
+; Syntax error compiling at (oopfun.clj:73:1).
+; Unable to resolve symbol: defclass in this context
+clj꞉todos.topics.oopfun꞉> 
+; Syntax error compiling at (oopfun.clj:73:1).
+; Unable to resolve symbol: defclass in this context
+clj꞉todos.topics.oopfun꞉> 
+; Syntax error compiling at (oopfun.clj:66:22).
+; Unable to resolve symbol: parent-class-spec in this context
+clj꞉todos.topics.oopfun꞉> 
 nil
-clj꞉todos.problems꞉> 
-#'todos.problems/is-sublist?
-clj꞉todos.problems꞉> 
-2  test:  [1 2]  whole:  [2 3 4 1 2 5]
-[2 3 4 1 2 5]
-[4 1 2 5]
-[2 5]
-[]
-false
-clj꞉todos.problems꞉> 
-(1 2)
-clj꞉todos.problems꞉> 
-#'todos.problems/is-sublist?
-clj꞉todos.problems꞉> 
-2  test:  [1 2]  whole:  [2 3 4 1 2 5]
-[2 3 4 1 2 5]
-[4 1 2 5]
-[2 5]
-[]
-false
-clj꞉todos.problems꞉> 
-#'todos.problems/is-sublist?
-clj꞉todos.problems꞉> 
-2  test:  [1 2]  whole:  [2 3 4 1 2 5]
-[2 3 4 1 2 5]
-[1 2]  =  [2 3]
-[4 1 2 5]
-[1 2]  =  [4 1]
-[2 5]
-[1 2]  =  [2 5]
-[]
-[1 2]  =  []
-false
-clj꞉todos.problems꞉> 
-#'todos.problems/is-sublist?
-clj꞉todos.problems꞉> 
-2  test:  [1 2]  whole:  [2 3 4 1 2 5]
-[2 3 4 1 2 5]
-[1 2]  =  [2 3]
-(3 4 1 2 5)
-[1 2]  =  [3 4]
-(4 1 2 5)
-[1 2]  =  [4 1]
-(1 2 5)
-[1 2]  =  [1 2]
-(2 5)
-[1 2]  =  [2 5]
-true
-clj꞉todos.problems꞉> 
-3  test:  [1 2 4]  whole:  [2 3 4 3 2 4 1 2 5]
-[2 3 4 3 2 4 1 2 5]
-[1 2 4]  =  [2 3 4]
-(3 4 3 2 4 1 2 5)
-[1 2 4]  =  [3 4 3]
-(4 3 2 4 1 2 5)
-[1 2 4]  =  [4 3 2]
-(3 2 4 1 2 5)
-[1 2 4]  =  [3 2 4]
-(2 4 1 2 5)
-[1 2 4]  =  [2 4 1]
-(4 1 2 5)
-[1 2 4]  =  [4 1 2]
-(1 2 5)
-[1 2 4]  =  [1 2 5]
-(2 5)
-[1 2 4]  =  [2 5]
-false
-clj꞉todos.problems꞉> 
-3  test:  [2 4 1]  whole:  [2 3 4 3 2 4 1 2 5]
-[2 3 4 3 2 4 1 2 5]
-[2 4 1]  =  [2 3 4]
-(3 4 3 2 4 1 2 5)
-[2 4 1]  =  [3 4 3]
-(4 3 2 4 1 2 5)
-[2 4 1]  =  [4 3 2]
-(3 2 4 1 2 5)
-[2 4 1]  =  [3 2 4]
-(2 4 1 2 5)
-[2 4 1]  =  [2 4 1]
-(4 1 2 5)
-[2 4 1]  =  [4 1 2]
-true
-clj꞉todos.problems꞉> 
-((1 2) (3 4) (5 6) (7 8))
-clj꞉todos.problems꞉> 
-#'todos.problems/is-sublist-normal
-clj꞉todos.problems꞉> 
-; Execution error (ArityException) at todos.problems/is-sublist-normal (form-init11399034629979840995.clj:25).
-; Wrong number of args (2) passed to: clojure.core/some?
-clj꞉todos.problems꞉> 
-#'todos.problems/is-sublist-normal
-clj꞉todos.problems꞉> 
-; Execution error (ArityException) at todos.problems/is-sublist-normal (form-init11399034629979840995.clj:25).
-; Wrong number of args (2) passed to: clojure.core/some?
-clj꞉todos.problems꞉> 
-#'todos.problems/sublist?
-clj꞉todos.problems꞉> 
-#'todos.problems/is-sublist-normal
-clj꞉todos.problems꞉> 
-; Execution error (ArityException) at todos.problems/is-sublist-normal (form-init11399034629979840995.clj:25).
-; Wrong number of args (1) passed to: todos.problems/is-sublist-normal/fn--7897
-clj꞉todos.problems꞉> 
-#'todos.problems/is-sublist-normal
-clj꞉todos.problems꞉> 
-#'todos.tryouts/price-with-taxes
-clj꞉todos.tryouts꞉> 
-#'todos.tryouts/price-calculator-with-tax
-clj꞉todos.tryouts꞉> 
-#'todos.tryouts/prices-for-mordor
-clj꞉todos.tryouts꞉> 
-10070.000M
-clj꞉todos.tryouts꞉> 
-#'todos.tryouts/prices-for-mordor
-clj꞉todos.tryouts꞉> 
-11700N
-clj꞉todos.tryouts꞉> 
-#'todos.tryouts/prices-for-mordor
-clj꞉todos.tryouts꞉> 
-11700.00M
-clj꞉todos.tryouts꞉> 
-; Syntax error compiling at (tryouts.clj:1324:5).
-; Unable to resolve symbol: compute-across in this context
-clj꞉todos.tryouts꞉> 
-; Execution error (IllegalStateException) at todos.tryouts/eval7921 (form-init11399034629979840995.clj:1326).
-; Attempting to call unbound fn: #'todos.tryouts/select-into-if
-clj꞉todos.tryouts꞉> 
-; Syntax error compiling at (tryouts.clj:27:3).
-; No such namespace: str
-clj꞉todos.tryouts꞉> 
-[]
-[9]
-[9 8]
-[9 8 7]
-[9 8 7 6]
-[9 8 7 6 5]
-[9 8 7 6 5 4]
-[9 8 7 6 5 4 3]
-[9 8 7 6 5 4 3 2]
-[9 8 7 6 5 4 3 2 1]
-3  test:  [2 4 1]  whole:  [2 3 4 3 2 4 1 2 5]
-nil
-clj꞉todos.tryouts꞉> 
-nil
-; WARNING: read already refers to: #'clojure.core/read in namespace: todos.tryouts, being replaced by: #'clojure.data.json/read
-clj꞉todos.tryouts꞉> 
-nil
-clj꞉todos.tryouts꞉> 
-nil
-clj꞉todos.tryouts꞉> 
-nil
-clj꞉todos.tryouts꞉> 
-; WARNING: compare already refers to: #'clojure.core/compare in namespace: todos.tryouts, being replaced by: #'todos.tryouts/compare
-; 
-; WARNING: cat already refers to: #'clojure.core/cat in namespace: todos.tryouts, being replaced by: #'todos.tryouts/cat
-; 
-; WARNING: vals already refers to: #'clojure.core/vals in namespace: todos.tryouts, being replaced by: #'todos.tryouts/vals
-; 
-; Syntax error (ClassNotFoundException) compiling at (tryouts.clj:658:3).
-; todos.datareaders
-clj꞉todos.tryouts꞉> 
-; Execution error (IllegalStateException) at todos.tryouts/eval8514 (form-init11399034629979840995.clj:1326).
-; Attempting to call unbound fn: #'todos.tryouts/select-into-if
-clj꞉todos.tryouts꞉> 
-; Syntax error compiling at (tryouts.clj:1324:5).
-; Unable to resolve symbol: compute-across in this context
-clj꞉todos.tryouts꞉> 
-#'todos.tryouts/compute-across
-clj꞉todos.tryouts꞉> 
-#'todos.tryouts/select-into-if
-clj꞉todos.tryouts꞉> 
-; Execution error (ClassCastException) at todos.tryouts/select-into-if$fn (form-init11399034629979840995.clj:1324).
-; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
-clj꞉todos.tryouts꞉> 
-; Syntax error compiling at (tryouts.clj:1326:3).
-; Unable to resolve symbol: select-into-if in this context
-clj꞉todos.tryouts.tryouts꞉> 
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/method-spec
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/method-specs
+clj꞉todos.topics.oopfun꞉> 
+{:age (fn age [] (* 2 10)), :greet (fn greet [visitor] (str "Hello there, " visitor))}
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/new-object
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/find-method
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/parent-class-spec
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/new-class
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/defclass
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/OBJECT
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Person
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Woman
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Lola
+clj꞉todos.topics.oopfun꞉> 
+; Execution error (NullPointerException) at todos.topics.oopfun/find-method (form-init9137904393547928790.clj:40).
+; null
+clj꞉todos.topics.oopfun꞉> 
+; Execution error (ArityException) at todos.topics.oopfun/eval8130 (form-init9137904393547928790.clj:3).
+; Wrong number of args (8) passed to: todos.topics.oopfun/eval8130/method-spec--8131
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/OBJECT
+clj꞉todos.topics.oopfun꞉> 
 ; nREPL Connection was closed
 ; Jacking in...
 ; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
@@ -224,152 +205,56 @@ clj꞉todos.tryouts.tryouts꞉> 
 clj꞉todos.core꞉> 
 ; Jack-in done.
 clj꞉todos.core꞉> 
-; Syntax error compiling at (tryouts.clj:1277:3).
+; Syntax error compiling at (oopfun.clj:4:2).
 ; Unable to resolve symbol: defn in this context
-clj꞉todos.tryouts.tryouts꞉> 
-[]
-[9]
-[9 8]
-[9 8 7]
-[9 8 7 6]
-[9 8 7 6 5]
-[9 8 7 6 5 4]
-[9 8 7 6 5 4 3]
-[9 8 7 6 5 4 3 2]
-[9 8 7 6 5 4 3 2 1]
-3  test:  [2 4 1]  whole:  [2 3 4 3 2 4 1 2 5]
+clj꞉todos.topics.oopfun꞉> 
 nil
-clj꞉todos.tryouts.tryouts꞉> 
-#'todos.tryouts.tryouts/compute-across
-clj꞉todos.tryouts.tryouts꞉> 
-#'todos.tryouts.tryouts/select-into-if
-clj꞉todos.tryouts.tryouts꞉> 
-; Execution error (ClassCastException) at todos.tryouts.tryouts/select-into-if$fn (form-init11671061117246355129.clj:1324).
-; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
-clj꞉todos.tryouts.tryouts꞉> 
-#'todos.tryouts.tryouts/select-into-if
-clj꞉todos.tryouts.tryouts꞉> 
-(6 4 1)
-clj꞉todos.tryouts.tryouts꞉> 
-(6 4 1)
-clj꞉todos.tryouts.tryouts꞉> 
-#'todos.tryouts.tryouts/select-up
-clj꞉todos.tryouts.tryouts꞉> 
-[1 4 6]
-clj꞉todos.tryouts.tryouts꞉> 
-(6 4 1)
-clj꞉todos.tryouts.tryouts꞉> 
-nil
-clj꞉todos.adapting-params꞉> 
-#'todos.adaptingparams/plus-two
-clj꞉todos.adaptingparams꞉> 
-4
-clj꞉todos.adaptingparams꞉> 
-#'todos.adaptingparams/minus-two
-clj꞉todos.adaptingparams꞉> 
-#'todos.adaptingparams/minus-two
-clj꞉todos.adaptingparams꞉> 
-0
-clj꞉todos.adaptingparams꞉> 
-#'todos.adaptingparams/two-minus
-clj꞉todos.adaptingparams꞉> 
-#'todos.topics.closures/adder
-clj꞉todos.topics.closures꞉> 
-#'todos.topics.closures/adder-5
-clj꞉todos.topics.closures꞉> 
-#'todos.topics.closures/add-5
-clj꞉todos.topics.closures꞉> 
-15
-clj꞉todos.topics.closures꞉> 
-#'todos.topics.closures/try-catch
-clj꞉todos.topics.closures꞉> 
-Divide by zero
-nil
-clj꞉todos.topics.closures꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-; Syntax error compiling try at (macro.clj:178:1).
-; Can't bind qualified name:todos.topics.macro/e
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/randomly
-clj꞉todos.topics.macro꞉> 
-(clojure.core/cond (= 1 0) (println "hello") (= 1 1) (println "my") (= 1 2) (println "world"))
-clj꞉todos.topics.macro꞉> 
-(try ((fn* [] (/ 1 0))) (catch java.lang.Exception todos.topics.macro/e (println (.getMessage todos.topics.macro/e))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-(try (fn* [] (/ 1 0)) (catch java.lang.Exception todos.topics.macro/e (println (.getMessage todos.topics.macro/e))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-(try (fn* [] (/ 1 0)) (catch java.lang.Exception 'todos.topics.macro/e (println (.getMessage todos.topics.macro/e))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-(try (fn* [] (/ 1 0)) (catch java.lang.Exception e__8123__auto__ (println (.getMessage e__8123__auto__))))
-clj꞉todos.topics.macro꞉> 
-#function[todos.topics.macro/eval8131/fn--8132]
-clj꞉todos.topics.macro꞉> 
-(try (fn* [] (/ 1 0)) (catch java.lang.Exception e__8123__auto__ (println (.getMessage e__8123__auto__))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-; Syntax error compiling at (macro.clj:180:1).
-; Unable to resolve symbol: .getMessage in this context
-clj꞉todos.topics.macro꞉> 
-(try (fn* [] (/ 1 0)) (catch java.lang.Exception e__8138__auto__ (println .getMessage e__8138__auto__)))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-(try (fn* [] (/ 1 0)) (catch java.lang.Exception e__8150__auto__ (println (.getMessage e__8150__auto__))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-(try todos.topics.macro/to-try (catch java.lang.Exception e__8159__auto__ (println (.getMessage e__8159__auto__))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-(try fn* [] (/ 1 0) (catch java.lang.Exception e__8168__auto__ (println (.getMessage e__8168__auto__))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-(try (todos.topics.macro/to-try) (catch java.lang.Exception e__8177__auto__ (println (.getMessage e__8177__auto__))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-(try '((fn* [] (/ 1 0))) (catch java.lang.Exception e__8187__auto__ (println (.getMessage e__8187__auto__))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-(try (fn* [] (/ 1 0)) (catch java.lang.Exception e__8196__auto__ (println (.getMessage e__8196__auto__))))
-clj꞉todos.topics.macro꞉> 
-#function[todos.topics.macro/eval8204/fn--8205]
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-#function[todos.topics.macro/eval8215/fn--8216]
-clj꞉todos.topics.macro꞉> 
-(try (do (fn* [] (/ 1 0))) (catch java.lang.Exception e__8209__auto__ (println (.getMessage e__8209__auto__))))
-clj꞉todos.topics.macro꞉> 
-#function[todos.topics.macro/eval8221/fn--8222]
-clj꞉todos.topics.macro꞉> 
-(try (do (fn* [] (/ 1 0))) (catch java.lang.Exception e__8209__auto__ (println (.getMessage e__8209__auto__))))
-clj꞉todos.topics.macro꞉> 
-(try (do (fn* [] (/ 1 0))) (catch java.lang.Exception e__8209__auto__ (println (.getMessage e__8209__auto__))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-(try (fn* [] (/ 1 0)) (catch java.lang.Exception e__8230__auto__ (println (.getMessage e__8230__auto__))))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/try-catch
-clj꞉todos.topics.macro꞉> 
-Divide by zero
-nil
-clj꞉todos.topics.macro꞉> 
-(try ((fn* [] (/ 1 0))) (catch java.lang.Exception e__8239__auto__ (println (.getMessage e__8239__auto__))))
-clj꞉todos.topics.macro꞉> 
+clj꞉todos.topics.oopfun꞉> 
+; Syntax error compiling var at (oopfun.clj:42:16).
+; Unable to resolve var: OBJECT in this context
+clj꞉todos.topics.oopfun꞉> 
+; Syntax error compiling at (oopfun.clj:52:22).
+; Unable to resolve symbol: parent-class-spec in this context
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/this
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/find-method
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/new-object
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/new-class
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/OBJECT
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/find-method
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/method-spec
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/method-specs
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/parent-class-spec
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/defclass
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Person
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Woman
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Lola
+clj꞉todos.topics.oopfun꞉> 
+"Hello, Shelly"
+clj꞉todos.topics.oopfun꞉> 
+"I was born about 30 years ago"
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfuncorrect/defclass
+clj꞉todos.topics.oopfuncorrect꞉> 
+#'todos.topics.oopfun/Person
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Woman
+clj꞉todos.topics.oopfun꞉> 
+#'todos.topics.oopfun/Lola
+clj꞉todos.topics.oopfun꞉> 
+"Hello, Shelly"
+clj꞉todos.topics.oopfun꞉> 
+"I was born about 30 years ago"
+clj꞉todos.topics.oopfun꞉> 

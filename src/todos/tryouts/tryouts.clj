@@ -1083,6 +1083,9 @@
              (do-to-all f (rest nums))))))
 
   (drop 10000 (do-to-all square (range 10010)))
+  
+  (mapcat str [1 2] [2 1])
+  
 )
 
 

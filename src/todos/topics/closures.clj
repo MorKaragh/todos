@@ -22,4 +22,17 @@
   (try-catch #(/ x y) #(println (.getMessage %))))
 
 
+(defn new-user [login password email]
+  (fn [a & args]
+    (case a
+      :login login
+      :password password
+      :email email
+      :authenticate (= password (first args))
+      nil)))
+
+(def usr-1 (new-user "login-1" "pass-1" "email@1.1"))
+(usr-1 :login)
+(usr-1 :authenticate "pass-1")
+
 
