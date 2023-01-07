@@ -18,721 +18,124 @@
 clj꞉todos.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉todos.core꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expense.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expense.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Syntax error (NoClassDefFoundError) compiling new at (exprproblem.clj:32:21).
-; todos/expenses/Expense (wrong name: Expense)
-clj꞉todos.topics.exprproblem꞉> 
-; Syntax error compiling at (project.clj:1:1).
-; Unable to resolve symbol: defproject in this context
-clj꞉user꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expense.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expense.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expense.Expense
-clj꞉todos.topics.exprproblem꞉> 
-nil
-clj꞉todos.topics.exprproblem꞉> 
-; Syntax error (NoClassDefFoundError) compiling new at (exprproblem.clj:32:21).
-; todos/expenses/Expense (wrong name: Expense)
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expense.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expense.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-[]
-[9]
-[9 8]
-[9 8 7]
-[9 8 7 6]
-[9 8 7 6 5]
-[9 8 7 6 5 4]
-[9 8 7 6 5 4 3]
-[9 8 7 6 5 4 3 2]
-[9 8 7 6 5 4 3 2 1]
-3  test:  [2 4 1]  whole:  [2 3 4 3 2 4 1 2 5]
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.tryouts.tryouts꞉> 
-[]
-[9]
-[9 8]
-[9 8 7]
-[9 8 7 6]
-[9 8 7 6 5]
-[9 8 7 6 5 4]
-[9 8 7 6 5 4 3]
-[9 8 7 6 5 4 3 2]
-[9 8 7 6 5 4 3 2 1]
-3  test:  [2 4 1]  whole:  [2 3 4 3 2 4 1 2 5]
-nil
-clj꞉todos.tryouts.tryouts꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉todos.core꞉> 
-; Jack-in done.
-clj꞉todos.core꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉todos.core꞉> 
-; Jack-in done.
-clj꞉todos.core꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉todos.core꞉> 
-; Jack-in done.
-clj꞉todos.core꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉todos.core꞉> 
-; Jack-in done.
-clj꞉todos.core꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉todos.core꞉> 
-; Jack-in done.
-clj꞉todos.core꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉todos.tryouts.tryouts꞉> 
-; Jack-in done.
-clj꞉todos.tryouts.tryouts꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; todos.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-nil
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/yaml
-clj꞉todos.topics.exprproblem꞉> 
-#object[org.yaml.snakeyaml.Yaml 0x74b9f53a "Yaml:1958343994"]
-clj꞉todos.topics.exprproblem꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉todos.core꞉> 
-; Jack-in done.
-clj꞉todos.core꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:476).
-; ru.expenses.Expense
-clj꞉todos.topics.exprproblem꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉todos.core꞉> 
-; Jack-in done.
-clj꞉todos.core꞉> 
-nil
-clj꞉todos.topics.exprproblem꞉> 
-; Syntax error compiling at (exprproblem_test.clj:10:1).
-; Unable to resolve symbol: deftest in this context
-clj꞉todos.topics.exprproblem-test꞉> 
-nil
-clj꞉todos.topics.exprproblem-test꞉> 
-; Syntax error compiling at (exprproblem_test.clj:5:20).
-; Unable to resolve symbol: new-expense in this context
-clj꞉todos.topics.exprproblem-test꞉> 
-nil
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/new-expense
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/total-cents
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/total-amount
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/is-category?
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/category-is
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/java-expenses
-clj꞉todos.topics.exprproblem꞉> 
-nil
-clj꞉todos.topics.exprproblem-test꞉> 
-#'todos.topics.exprproblem-test/clj-expenses
-clj꞉todos.topics.exprproblem-test꞉> 
-#'todos.topics.exprproblem-test/test-expenses-total
-clj꞉todos.topics.exprproblem-test꞉> 
-#'todos.topics.exprproblem-test/mixed-expenses
-clj꞉todos.topics.exprproblem-test꞉> 
-#'todos.topics.exprproblem-test/test-mixed-expenses-total
-clj꞉todos.topics.exprproblem-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.exprproblem-test/test-mixed-expenses-total (Numbers.java:15):
-; error: java.lang.NullPointerException (Numbers.java:15)
-; expected:
-(= 423 (total-amount mixed-expenses))
-
-; FAIL in todos.topics.exprproblem-test/test-mixed-expenses-total (form-init6416820378118466852.clj:16):
-; expected:
-(= 444 (total-amount (category-is "books") mixed-expenses))
-
-; actual:
-(not (= 444 2233))
-
-; 3 tests finished, problems found. 😭 errors: 1, failures: 1, ns: 1, vars: 2
-clj꞉todos.topics.exprproblem-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.exprproblem-test/test-mixed-expenses-total (Numbers.java:15):
-; error: java.lang.NullPointerException (Numbers.java:15)
-; expected:
-(= 423 (total-amount mixed-expenses))
-
-; FAIL in todos.topics.exprproblem-test/test-mixed-expenses-total (form-init6416820378118466852.clj:16):
-; expected:
-(= 444 (total-amount (category-is "books") mixed-expenses))
-
-; actual:
-(not (= 444 2233))
-
-; 3 tests finished, problems found. 😭 errors: 1, failures: 1, ns: 1, vars: 2
-clj꞉todos.topics.exprproblem-test꞉> 
-#'todos.topics.exprproblem-test/test-mixed-expenses-total
-clj꞉todos.topics.exprproblem-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.exprproblem-test/test-mixed-expenses-total (Numbers.java:16):
-; error: java.lang.NullPointerException (Numbers.java:16)
-; expected:
-(= 423 (total-amount mixed-expenses))
-
-; 3 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 2
-clj꞉todos.topics.exprproblem-test꞉> 
-#'todos.topics.exprproblem/total-cents
-clj꞉todos.topics.exprproblem꞉> 
-nil
-clj꞉todos.topics.exprproblem꞉> 
-; Syntax error compiling at (exprproblem.clj:14:1).
-; Can't take value of a macro: #'clojure.core/->
-clj꞉todos.topics.exprproblem꞉> 
-#multifn[total-cents 0x7546f2f9]
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/is-category?
-clj꞉todos.topics.exprproblem꞉> 
-#multifn[is-category? 0x7438f630]
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.multimethods/example-person
-clj꞉todos.topics.multimethods꞉> 
-#'todos.topics.multimethods/fee-amount
-clj꞉todos.topics.multimethods꞉> 
-#'todos.topics.multimethods/affiliate-fee
-clj꞉todos.topics.multimethods꞉> 
-30.0000M
-clj꞉todos.topics.multimethods꞉> 
-#'todos.topics.multimethods/affiliate-fee-2
-clj꞉todos.topics.multimethods꞉> 
-#multifn[affiliate-fee-2 0x154c028a]
-clj꞉todos.topics.multimethods꞉> 
-#multifn[affiliate-fee-2 0x154c028a]
-clj꞉todos.topics.multimethods꞉> 
-#multifn[affiliate-fee-2 0x154c028a]
-clj꞉todos.topics.multimethods꞉> 
-30.0000M
-clj꞉todos.topics.multimethods꞉> 
-#'todos.topics.multimethods/operations
-clj꞉todos.topics.multimethods꞉> 
-#'todos.topics.multimethods/calculator
-clj꞉todos.topics.multimethods꞉> 
-#multifn[calculator 0x6ffe1bbe]
-clj꞉todos.topics.multimethods꞉> 
-#multifn[calculator 0x6ffe1bbe]
-clj꞉todos.topics.multimethods꞉> 
-#multifn[calculator 0x6ffe1bbe]
-clj꞉todos.topics.multimethods꞉> 
-{"*" #function[todos.topics.multimethods/eval8274/fn--8275],
- "-" #function[todos.topics.multimethods/eval8270/fn--8271],
- "+" #function[todos.topics.multimethods/eval8266/fn--8267]}
-clj꞉todos.topics.multimethods꞉> 
-#function[todos.topics.multimethods/eval8266/fn--8267]
-clj꞉todos.topics.multimethods꞉> 
-#multifn[total-cents 0x7546f2f9]
-clj꞉todos.topics.exprproblem꞉> 
-#multifn[is-category? 0x7438f630]
-clj꞉todos.topics.exprproblem꞉> 
-nil
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/new-expense
-clj꞉todos.topics.exprproblem꞉> 
-nil
-clj꞉todos.topics.exprproblem꞉> 
-#multifn[total-cents 0x7546f2f9]
-clj꞉todos.topics.exprproblem꞉> 
-#multifn[total-cents 0x7546f2f9]
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/total-amount
-clj꞉todos.topics.exprproblem꞉> 
-nil
-clj꞉todos.topics.exprproblem꞉> 
-#multifn[is-category? 0x7438f630]
-clj꞉todos.topics.exprproblem꞉> 
-#multifn[is-category? 0x7438f630]
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/category-is
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/java-expenses
-clj꞉todos.topics.exprproblem꞉> 
-; Running all project tests…
-; FAIL in todos.topics.exprproblem-test/test-mixed-expenses-total (form-init6416820378118466852.clj:16):
-; expected:
-423
-
-; actual:
-23386
-
-; FAIL in todos.topics.exprproblem-test/test-mixed-expenses-total (form-init6416820378118466852.clj:17):
-; expected:
-2233
-
-; actual:
-6688
-
-; 3 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 2
-clj꞉todos.topics.exprproblem꞉> 
-; Running all project tests…
-; FAIL in todos.topics.exprproblem-test/test-mixed-expenses-total (form-init6416820378118466852.clj:16):
-; expected:
-423
-
-; actual:
-23386
-
-; FAIL in todos.topics.exprproblem-test/test-mixed-expenses-total (form-init6416820378118466852.clj:17):
-; expected:
-2233
-
-; actual:
-6688
-
-; 3 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 2
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem-test/test-mixed-expenses-total
-clj꞉todos.topics.exprproblem-test꞉> 
-; Running all project tests…
-; 3 tests finished, all passing 👍, ns: 1, vars: 2
-clj꞉todos.topics.exprproblem-test꞉> 
-#'todos.topics.exprproblem/dispatch-fn-for
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/expand-spec
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/def-modus-operandi
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/dispatch-fn-for
-clj꞉todos.topics.exprproblem꞉> 
-(clojure.core/fn ["first" "second"] (clojure.core/class "first"))
-clj꞉todos.topics.exprproblem꞉> 
-(clojure.core/defmulti "meth first second" (clojure.core/fn nil (clojure.core/class nil)))
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error (ArityException) at todos.topics.exprproblem/eval8374 (form-init6416820378118466852.clj:47).
-; Wrong number of args (2) passed to: todos.topics.exprproblem/expand-spec
-clj꞉todos.topics.exprproblem꞉> 
-(clojure.core/defmulti "meth" (clojure.core/fn "first" (clojure.core/class \f)))
-clj꞉todos.topics.exprproblem꞉> 
-; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:553).
-; Don't know how to create ISeq from: java.lang.Character
-clj꞉todos.topics.exprproblem꞉> 
-(do)
-clj꞉todos.topics.exprproblem꞉> 
-(clojure.core/fn ["first" "second"] (clojure.core/class "first"))
-clj꞉todos.topics.exprproblem꞉> 
-(clojure.core/defmulti "meth" (clojure.core/fn "first" (clojure.core/class \f)))
-clj꞉todos.topics.exprproblem꞉> 
-#'todos.topics.exprproblem/def-modus-operandi
-clj꞉todos.topics.exprproblem꞉> 
-(do)
-clj꞉todos.topics.exprproblem꞉> 
-; Execution error at todos.topics.tdd-test/eval8407$loading (form-init6416820378118466852.clj:1).
-; No namespace: todos.topics.tdd
-clj꞉todos.topics.tdd-test꞉> 
-nil
-clj꞉todos.topics.tdd꞉> 
-nil
-clj꞉todos.topics.tdd-test꞉> 
-; Syntax error compiling at (tdd_test.clj:6:11).
-; Unable to resolve symbol: date in this context
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd/date
-clj꞉todos.topics.tdd꞉> 
-#'todos.topics.tdd/day-from
-clj꞉todos.topics.tdd꞉> 
-#'todos.topics.tdd/day-from
-clj꞉todos.topics.tdd꞉> 
-#'todos.topics.tdd/day-from
-clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; 3 tests finished, all passing 👍, ns: 1, vars: 2
-clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; 3 tests finished, all passing 👍, ns: 1, vars: 2
-clj꞉todos.topics.tdd꞉> 
-; Syntax error compiling at (tdd_test.clj:6:11).
-; Unable to resolve symbol: date in this context
-clj꞉todos.topics.tdd-test꞉> 
-nil
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-simple-parsing
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; FAIL in todos.topics.tdd-test/test-simple-parsing (form-init6416820378118466852.clj:7):
-; expected:
-nil
-
-; actual:
-22
-
-; ERROR in todos.topics.tdd-test/test-simple-parsing (form-init6416820378118466852.clj:7):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (form-init6416820378118466852.clj:7)
-; 5 tests finished, problems found. 😭 errors: 1, failures: 1, ns: 2, vars: 3
-clj꞉todos.topics.tdd-test꞉> 
-; Syntax error (IllegalArgumentException) compiling new at (tdd.clj:6:11).
-; Unable to resolve classname: SimpleDateFormat
+; Syntax error compiling at (tdd.clj:43:1).
+; Unable to resolve symbol: defn in this context
 clj꞉todos.topics.tdd꞉> 
 nil
 clj꞉todos.topics.tdd꞉> 
 #'todos.topics.tdd/date
 clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; FAIL in todos.topics.tdd-test/test-simple-parsing (form-init6416820378118466852.clj:7):
-; expected:
-nil
-
-; actual:
-22
-
-; ERROR in todos.topics.tdd-test/test-simple-parsing (form-init6416820378118466852.clj:7):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (form-init6416820378118466852.clj:7)
-; 5 tests finished, problems found. 😭 errors: 1, failures: 1, ns: 2, vars: 3
-clj꞉todos.topics.tdd꞉> 
-#inst "2011-11-11T00:00:00.000+06:00"
-clj꞉todos.topics.tdd꞉> 
-; Syntax error compiling at (tdd.clj:13:3).
-; No such namespace: Calendar
-clj꞉todos.topics.tdd꞉> 
-nil
-clj꞉todos.topics.tdd꞉> 
-#'todos.topics.tdd/day-from
-clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/test-simple-parsing (form-init6416820378118466852.clj:7):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (form-init6416820378118466852.clj:7)
-; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 2, vars: 3
-clj꞉todos.topics.tdd꞉> 
-#'todos.topics.tdd/day-from
-clj꞉todos.topics.tdd꞉> 
 #'todos.topics.tdd/date
 clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/test-simple-parsing (form-init6416820378118466852.clj:7):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app') (form-init6416820378118466852.clj:7)
-; 5 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 2, vars: 3
-clj꞉todos.topics.tdd꞉> 
-#'todos.topics.tdd-test/test-simple-parsing
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-simple-parsing
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; 4 tests finished, all passing 👍, ns: 2, vars: 3
-clj꞉todos.topics.tdd-test꞉> 
-; Syntax error compiling at (tdd_test.clj:1:7842).
-; Unable to resolve symbol: year-from in this context
-clj꞉todos.topics.tdd-test꞉> 
-; Syntax error compiling at (tdd_test.clj:8:12).
-; Unable to resolve symbol: month-from in this context
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd/year-from
-clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; 4 tests finished, all passing 👍, ns: 2, vars: 3
-clj꞉todos.topics.tdd꞉> 
-; Syntax error compiling at (tdd_test.clj:8:12).
-; Unable to resolve symbol: month-from in this context
-clj꞉todos.topics.tdd-test꞉> 
-nil
-clj꞉todos.topics.tdd-test꞉> 
-; Syntax error compiling at (tdd_test.clj:8:12).
-; Unable to resolve symbol: month-from in this context
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd/month-from
+#'todos.topics.tdd/day-from
 clj꞉todos.topics.tdd꞉> 
 #'todos.topics.tdd/year-from
 clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; 4 tests finished, all passing 👍, ns: 2, vars: 3
-clj꞉todos.topics.tdd꞉> 
-; Syntax error compiling at (tdd_test.clj:8:12).
-; Unable to resolve symbol: month-from in this context
-clj꞉todos.topics.tdd-test꞉> 
-nil
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-simple-parsing
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; FAIL in todos.topics.tdd-test/test-simple-parsing (form-init6416820378118466852.clj:8):
-; expected:
-0
-
-; actual:
-1
-
-; 6 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 2, vars: 3
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-simple-parsing
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; FAIL in todos.topics.tdd-test/test-simple-parsing (form-init6416820378118466852.clj:8):
-; expected:
-10
-
-; actual:
-1
-
-; 6 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 2, vars: 3
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-simple-parsing
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; FAIL in todos.topics.tdd-test/test-simple-parsing (form-init6416820378118466852.clj:8):
-; expected:
-0
-
-; actual:
-1
-
-; 6 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 2, vars: 3
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-simple-parsing
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; FAIL in todos.topics.tdd-test/test-simple-parsing (form-init6416820378118466852.clj:8):
-; expected:
-1
-
-; actual:
-0
-
-; 6 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 2, vars: 3
-clj꞉todos.topics.tdd-test꞉> 
-0
-clj꞉todos.topics.tdd꞉> 
-0
-clj꞉todos.topics.tdd꞉> 
-11
-clj꞉todos.topics.tdd꞉> 
 #'todos.topics.tdd/month-from
-clj꞉todos.topics.tdd꞉> 
-12
-clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; 6 tests finished, all passing 👍, ns: 2, vars: 3
-clj꞉todos.topics.tdd꞉> 
-; Syntax error compiling at (tdd.clj:25:5).
-; No such namespace: str
-clj꞉todos.topics.tdd꞉> 
-nil
-clj꞉todos.topics.tdd꞉> 
-#'todos.topics.tdd/as-string
-clj꞉todos.topics.tdd꞉> 
-; Syntax error compiling at (tdd_test.clj:13:12).
-; Unable to resolve symbol: as-string in this context
-clj꞉todos.topics.tdd-test꞉> 
-nil
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-as-string
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; FAIL in todos.topics.tdd-test/test-as-string (form-init6416820378118466852.clj:13):
-; expected:
-"2011-5-13"
-
-; actual:
-"2011-05-13"
-
-; 7 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 2, vars: 4
-clj꞉todos.topics.tdd-test꞉> 
-"01"
-clj꞉todos.topics.tdd꞉> 
-"12"
-clj꞉todos.topics.tdd꞉> 
-; Syntax error compiling at (tdd.clj:29:22).
-; Unable to resolve symbol: pad in this context
 clj꞉todos.topics.tdd꞉> 
 #'todos.topics.tdd/pad
 clj꞉todos.topics.tdd꞉> 
 #'todos.topics.tdd/as-string
 clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; 7 tests finished, all passing 👍, ns: 2, vars: 4
-clj꞉todos.topics.tdd꞉> 
 #'todos.topics.tdd/increment-day
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/increment-month
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/increment-year
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/decrement-day
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/decrement-month
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/decrement-year
 clj꞉todos.topics.tdd꞉> 
 nil
 clj꞉todos.topics.tdd-test꞉> 
+#'todos.topics.tdd-test/test-simple-parsing
+clj꞉todos.topics.tdd-test꞉> 
+#'todos.topics.tdd-test/test-as-string
+clj꞉todos.topics.tdd-test꞉> 
 #'todos.topics.tdd-test/test-increment-date
 clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/test-increment-date (form-init6416820378118466852.clj:17):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.util.GregorianCalendar cannot be cast to class java.lang.String (java.util.GregorianCalendar and java.lang.String are in module java.base of loader 'bootstrap') (form-init6416820378118466852.clj:17)
-; 8 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 2, vars: 5
+#'todos.topics.tdd-test/test-decrement-date
 clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd/increment-day
-clj꞉todos.topics.tdd꞉> 
 ; Running all project tests…
-; ERROR in todos.topics.tdd-test/test-increment-date (form-init6416820378118466852.clj:17):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.util.GregorianCalendar cannot be cast to class java.lang.String (java.util.GregorianCalendar and java.lang.String are in module java.base of loader 'bootstrap') (form-init6416820378118466852.clj:17)
-; 8 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 2, vars: 5
+; 10 tests finished, all passing 👍, ns: 1, vars: 4
+clj꞉todos.topics.tdd-test꞉> 
+#'todos.topics.tdd-test/test-decrement-date
+clj꞉todos.topics.tdd-test꞉> 
+; Running all project tests…
+; FAIL in todos.topics.tdd-test/test-decrement-date (form-init5980717367850569939.clj:31):
+; expected:
+"2010-05-13"
+
+; actual:
+"2010-05-11"
+
+; 10 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 4
+clj꞉todos.topics.tdd-test꞉> 
+#'todos.topics.tdd-test/test-decrement-date
+clj꞉todos.topics.tdd-test꞉> 
+; Running all project tests…
+; 10 tests finished, all passing 👍, ns: 1, vars: 4
+clj꞉todos.topics.tdd-test꞉> 
+#'todos.topics.tdd/log-calling
 clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/fetch-all-expenses
+clj꞉todos.topics.tdd꞉> 
+; Syntax error compiling at (tdd.clj:70:5).
+; Unable to resolve symbol: expenses-greater-than in this context
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/log-call
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/fetch-all-expenses
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/expenses-greater-than
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/fetch-expenses-greater-than
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/fetch-expenses-greater-than
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/fetch-expenses-greater-than
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/fetch-expenses-greater-than
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/fetch-expenses-greater-than
+clj꞉todos.topics.tdd꞉> 
+#'todos.topics.tdd/fetch-expenses-greater-than
+clj꞉todos.topics.tdd꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉todos.core꞉> 
+; Jack-in done.
+clj꞉todos.core꞉> 
+#'todos.topics.tdd/fetch-expenses-greater-than
+clj꞉todos.topics.tdd꞉> 
+Audit: called  1  with  :a, :b
 nil
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-increment-date
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/test-increment-date (form-init6416820378118466852.clj:17):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.util.GregorianCalendar cannot be cast to class java.lang.String (java.util.GregorianCalendar and java.lang.String are in module java.base of loader 'bootstrap') (form-init6416820378118466852.clj:17)
-; 8 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 2, vars: 5
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-increment-date
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/test-increment-date (form-init6416820378118466852.clj:17):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.util.GregorianCalendar cannot be cast to class java.lang.String (java.util.GregorianCalendar and java.lang.String are in module java.base of loader 'bootstrap') (form-init6416820378118466852.clj:17)
-; 8 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 2, vars: 5
-clj꞉todos.topics.tdd-test꞉> 
-; Execution error (ClassCastException) at todos.topics.tdd/date (form-init6416820378118466852.clj:6).
-; class java.util.GregorianCalendar cannot be cast to class java.lang.String (java.util.GregorianCalendar and java.lang.String are in module java.base of loader 'bootstrap')
 clj꞉todos.topics.tdd꞉> 
-#'todos.topics.tdd/increment-day
+#'todos.topics.tdd-test/test-decrement-date
+clj꞉todos.topics.tdd-test꞉> 
+#'todos.topics.tdd/expensez
 clj꞉todos.topics.tdd꞉> 
-; Execution error (ClassCastException) at todos.topics.tdd/date (form-init6416820378118466852.clj:6).
-; class java.util.GregorianCalendar cannot be cast to class java.lang.String (java.util.GregorianCalendar and java.lang.String are in module java.base of loader 'bootstrap')
+#'todos.topics.tdd/fetch-all-expenses
 clj꞉todos.topics.tdd꞉> 
-#'todos.topics.tdd/increment-day
+Audit: called  fetch all  with  a, b, c
+; Execution error (ArityException) at todos.topics.tdd/fetch-all-expenses (form-init11567696548618794613.clj:68).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
 clj꞉todos.topics.tdd꞉> 
-#inst "2011-11-12T00:00:00.000+06:00"
+#'todos.topics.tdd/fetch-all-expenses
 clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; 7 tests finished, all passing 👍, ns: 2, vars: 5
+Audit: called  fetch all  with  a, b, v
+[{:name "one", :amount 10} {:name "two", :amount 15} {:name "three", :amount 20} {:name "four", :amount 25}]
 clj꞉todos.topics.tdd꞉> 
