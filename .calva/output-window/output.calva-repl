@@ -18,497 +18,228 @@
 clj꞉todos.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉todos.core꞉> 
-#'todos.topics.stubbing/stubbing
-clj꞉todos.topics.stubbing꞉> 
 nil
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/stubbing
-clj꞉todos.topics.stubbing꞉> 
-; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:553).
-; Don't know how to create ISeq from: java.lang.Long
-clj꞉todos.topics.stubbing꞉> 
-(3 1)
-clj꞉todos.topics.stubbing꞉> 
-; Execution error (FileNotFoundException) at todos.topics.tdd-test/eval7954$loading (form-init14296293143392148009.clj:1).
-; Could not locate stubbing__init.class, stubbing.clj or stubbing.cljc on classpath.
-clj꞉todos.topics.tdd-test꞉> 
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/single-arg-fn
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/my-let
+clj꞉todos.topics.macro꞉> 
+2000
+clj꞉todos.topics.macro꞉> 
+(1 2)
+clj꞉todos.topics.macro꞉> 
+(3 4 5 6)
+clj꞉todos.topics.macro꞉> 
+((clojure.core/fn [x] (todos.topics.macro/my-let (y x z (+ x y)) (* x y z))) 10)
+clj꞉todos.topics.macro꞉> 
+(todos.topics.macro/single-arg-fn (x 10) (todos.topics.macro/my-let (y x z (+ x y)) (* x y z)))
+clj꞉todos.topics.macro꞉> 
+((fn* ([x] ((fn* ([y] ((fn* ([z] (do (* x y z)))) (+ x y)))) x))) 10)
+clj꞉todos.topics.macro꞉> 
+2000
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/some-computation
+clj꞉todos.topics.macro꞉> 
+12
+clj꞉todos.topics.macro꞉> 
+false
+clj꞉todos.topics.macro꞉> 
+24
+clj꞉todos.topics.macro꞉> 
 nil
-clj꞉todos.topics.tdd-test꞉> 
-; Syntax error compiling at (tdd_test.clj:40:3).
-; Unable to resolve symbol: expensez in this context
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-fetch-expenses-greater-than
-clj꞉todos.topics.tdd-test꞉> 
-(clojure.core/with-redefs-fn
- {#'fetch-all-expenses (constantly expensez)}
- (clojure.core/fn
-  []
-  (let
-   [filtered (fetch-expenses-greater-than "" "" "" 15.0)]
-   (is (= (count filtered) 2))
-   (is (= (:amount (first filtered)) 20))
-   (is (= (:amount (last filtered)) 30)))))
-clj꞉todos.topics.stubbing꞉> 
-#function[clojure.core/constantly/fn--5657]
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/stup
-clj꞉todos.topics.stubbing꞉> 
-:a
-clj꞉todos.topics.stubbing꞉> 
-:a
-clj꞉todos.topics.stubbing꞉> 
-:a
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-Audit: called  expenses-greater-than  with  15
-; FAIL in todos.topics.tdd-test/test-fetch-expenses-greater-than (form-init14296293143392148009.clj:43):
-; expected:
-(= (:amount (first filtered)) 20)
-
-; actual:
-(not (= 20.0 20))
-
-; FAIL in todos.topics.tdd-test/test-fetch-expenses-greater-than (form-init14296293143392148009.clj:44):
-; expected:
-(= (:amount (last filtered)) 30)
-
-; actual:
-(not (= 30.0 30))
-
-; 14 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 6
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-Audit: called  expenses-greater-than  with  15
-; 14 tests finished, all passing 👍, ns: 1, vars: 6
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-Audit: called  expenses-greater-than  with  15
-; 16 tests finished, all passing 👍, ns: 1, vars: 6
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-Audit: called  expenses-greater-than  with  15
-; 16 tests finished, all passing 👍, ns: 1, vars: 6
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/mock-calls
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/stub-fn
-clj꞉todos.topics.stubbing꞉> 
-; Execution error (ArityException) at todos.topics.stubbing/stubbing (form-init14296293143392148009.clj:12).
-; Wrong number of args (1) passed to: todos.topics.stubbing/stubbing/fn--8538
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/stub-fn
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/mock-calls
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/stub-fn
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/stubbing
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/stub-fn
-clj꞉todos.topics.stubbing꞉> 
-(clojure.core/with-redefs-fn
- {#'fetch-all-expenses (todos.topics.stubbing/stub-fn fetch-all-expenses expensez)}
- (clojure.core/fn
-  []
-  (let
-   [filtered (fetch-expenses-greater-than "" "" "" 15.0)]
-   (is (= (count filtered) 2))
-   (is (= (:amount (first filtered)) 20))
-   (is (= (:amount (last filtered)) 30)))))
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/mock-fn
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/mocking
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/mocking
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/bfs
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/graph
-clj꞉todos.topics.stubbing꞉> 
-; Execution error (ClassCastException) at todos.topics.stubbing/bfs (form-init14296293143392148009.clj:42).
-; class clojure.lang.PersistentHashSet cannot be cast to class clojure.lang.IAtom (clojure.lang.PersistentHashSet and clojure.lang.IAtom are in unnamed module of loader 'app')
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/bfs
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/graph
-clj꞉todos.topics.stubbing꞉> 
-; Execution error (ClassCastException) at todos.topics.stubbing/bfs (form-init14296293143392148009.clj:42).
-; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IAtom (clojure.lang.PersistentList and clojure.lang.IAtom are in unnamed module of loader 'app')
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/bfs
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/graph
-clj꞉todos.topics.stubbing꞉> 
-; Execution error (ClassCastException) at todos.topics.stubbing/bfs (form-init14296293143392148009.clj:42).
-; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IAtom (clojure.lang.PersistentList and clojure.lang.IAtom are in unnamed module of loader 'app')
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/mocking
-clj꞉todos.topics.stubbing꞉> 
-; Syntax error compiling at (tdd_test.clj:47:3).
-; Unable to resolve symbol: mocking in this context
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/mocking
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/expenses-greater-than-test (APersistentMap.java:51):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:51)
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (APersistentMap.java:41):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:41)
-; 12 tests finished, problems found. 😭 errors: 2, failures: 0, ns: 1, vars: 6
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-filter-greater-than
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/test-filter-greater-than
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/expenses-greater-than-test (APersistentMap.java:51):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:51)
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (APersistentMap.java:41):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:41)
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (APersistentMap.java:50):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:50)
-; 13 tests finished, problems found. 😭 errors: 3, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd/fetch-expenses-greater-than
-clj꞉todos.topics.tdd꞉> 
-#'todos.topics.stubbing/mocking
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/expenses-greater-than-test (APersistentMap.java:51):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:51)
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (APersistentMap.java:41):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:41)
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (APersistentMap.java:50):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:50)
-; 13 tests finished, problems found. 😭 errors: 3, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/mocking
-clj꞉todos.topics.stubbing꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/expenses-greater-than-test (APersistentMap.java:51):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:51)
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (APersistentMap.java:41):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:41)
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (APersistentMap.java:50):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:50)
-; 13 tests finished, problems found. 😭 errors: 3, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.stubbing꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/expenses-greater-than-test (APersistentMap.java:51):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:51)
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (APersistentMap.java:41):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:41)
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (APersistentMap.java:50):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:50)
-; 13 tests finished, problems found. 😭 errors: 3, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/test-fetch-expenses-greater-than
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/expenses-greater-than-test (APersistentMap.java:51):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:51)
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (APersistentMap.java:41):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:41)
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (APersistentMap.java:50):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:50)
-; 13 tests finished, problems found. 😭 errors: 3, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/mocking
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd/fetch-expenses-greater-than
-clj꞉todos.topics.tdd꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/expenses-greater-than-test (APersistentMap.java:51):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:51)
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (APersistentMap.java:41):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:41)
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (APersistentMap.java:50):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:50)
-; 13 tests finished, problems found. 😭 errors: 3, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.tdd꞉> 
-#'todos.topics.stubbing/stubbing
-clj꞉todos.topics.stubbing꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; 19 tests finished, all passing 👍, ns: 1, vars: 7
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/mocking
-clj꞉todos.topics.stubbing꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/expenses-greater-than-test (APersistentMap.java:51):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:51)
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (APersistentMap.java:41):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:41)
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (APersistentMap.java:50):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap') (APersistentMap.java:50)
-; 13 tests finished, problems found. 😭 errors: 3, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/stubbing
-clj꞉todos.topics.stubbing꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; 19 tests finished, all passing 👍, ns: 1, vars: 7
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.stubbing/verify-call-times-for
-clj꞉todos.topics.stubbing꞉> 
-(todos.topics.stubbing/is (clojure.core/= 1 (clojure.core/count (@todos.topics.stubbing/mock-calls nil))))
-clj꞉todos.topics.stubbing꞉> 
-:no
-clj꞉todos.topics.stubbing꞉> 
-:verify-call-times-for
-clj꞉todos.topics.stubbing꞉> 
-(todos.topics.stubbing/is (clojure.core/= 1 (clojure.core/count (@todos.topics.stubbing/mock-calls nil))))
-clj꞉todos.topics.stubbing꞉> 
-; Syntax error compiling at (tdd_test.clj:55:14).
-; No such var: todos.topics.stubbing/is
-clj꞉todos.topics.tdd-test꞉> 
-; Syntax error compiling at (tdd_test.clj:55:12).
-; No such var: todos.topics.stubbing/is
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/verify-nth-call-args-for
-clj꞉todos.topics.stubbing꞉> 
-; Syntax error compiling at (tdd_test.clj:55:12).
-; No such var: todos.topics.stubbing/is
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/verify-nth-call-args-for
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; FAIL in todos.topics.tdd-test/expenses-greater-than-test (form-init14296293143392148009.clj:56):
-; expected:
-("expenses-greater-than" 15.0)
-
-; actual:
-("expenses-greater-than" 15)
-
-; FAIL in todos.topics.tdd-test/expenses-greater-than-test (form-init14296293143392148009.clj:57):
-; expected:
-("expenses-greater-than" 15.0)
-
-; actual:
-("expenses-greater-than" 15)
-
-; 22 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; 22 tests finished, all passing 👍, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; 22 tests finished, all passing 👍, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/defmocktest
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (core.clj:40):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class clojure.lang.Var$Unbound cannot be cast to class clojure.lang.IAtom (clojure.lang.Var$Unbound and clojure.lang.IAtom are in unnamed module of loader 'app') (core.clj:40)
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (core.clj:49):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class clojure.lang.Var$Unbound cannot be cast to class clojure.lang.IAtom (clojure.lang.Var$Unbound and clojure.lang.IAtom are in unnamed module of loader 'app') (core.clj:49)
-; 18 tests finished, problems found. 😭 errors: 2, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/defmocktest
-clj꞉todos.topics.stubbing꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (core.clj:40):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class clojure.lang.Var$Unbound cannot be cast to class clojure.lang.IAtom (clojure.lang.Var$Unbound and clojure.lang.IAtom are in unnamed module of loader 'app') (core.clj:40)
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (core.clj:49):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class clojure.lang.Var$Unbound cannot be cast to class clojure.lang.IAtom (clojure.lang.Var$Unbound and clojure.lang.IAtom are in unnamed module of loader 'app') (core.clj:49)
-; 18 tests finished, problems found. 😭 errors: 2, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-; ERROR in todos.topics.tdd-test/test-fetch-expenses-greater-than (core.clj:40):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class clojure.lang.Var$Unbound cannot be cast to class clojure.lang.IAtom (clojure.lang.Var$Unbound and clojure.lang.IAtom are in unnamed module of loader 'app') (core.clj:40)
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (core.clj:49):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class clojure.lang.Var$Unbound cannot be cast to class clojure.lang.IAtom (clojure.lang.Var$Unbound and clojure.lang.IAtom are in unnamed module of loader 'app') (core.clj:49)
-; 18 tests finished, problems found. 😭 errors: 2, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (core.clj:49):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class clojure.lang.Var$Unbound cannot be cast to class clojure.lang.IAtom (clojure.lang.Var$Unbound and clojure.lang.IAtom are in unnamed module of loader 'app') (core.clj:49)
-; 20 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/defmocktest
-clj꞉todos.topics.stubbing꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (core.clj:49):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class clojure.lang.Var$Unbound cannot be cast to class clojure.lang.IAtom (clojure.lang.Var$Unbound and clojure.lang.IAtom are in unnamed module of loader 'app') (core.clj:49)
-; 20 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; ERROR in todos.topics.tdd-test/test-filter-greater-than (core.clj:49):
-; : Uncaught exception, not in assertion
-; error: java.lang.ClassCastException: class clojure.lang.Var$Unbound cannot be cast to class clojure.lang.IAtom (clojure.lang.Var$Unbound and clojure.lang.IAtom are in unnamed module of loader 'app') (core.clj:49)
-; 20 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉todos.core꞉> 
-; Jack-in done.
-clj꞉todos.core꞉> 
-#'todos.topics.tdd/fetch-expenses-greater-than
-clj꞉todos.topics.tdd꞉> 
-; Syntax error compiling at (tdd_test.clj:55:12).
-; No such var: todos.topics.stubbing/mock-calls
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/defmocktest
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; 19 tests finished, all passing 👍, ns: 1, vars: 6
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.stubbing/mocking
-clj꞉todos.topics.stubbing꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; 19 tests finished, all passing 👍, ns: 1, vars: 6
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; FAIL in todos.topics.tdd-test/expenses-greater-than-test (form-init11109390307925406588.clj:56):
-; log-call called incorrectly
-; expected:
-2
-
-; actual:
-1
-
-; 19 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 6
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; FAIL in todos.topics.tdd-test/expenses-greater-than-test (form-init11109390307925406588.clj:56):
-; log-call called correctly
-; expected:
-2
-
-; actual:
-1
-
-; 19 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 6
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/expenses-greater-than-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; 19 tests finished, all passing 👍, ns: 1, vars: 6
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/simple-upper-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; 21 tests finished, all passing 👍, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/simple-upper-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; FAIL in todos.topics.tdd-test/simple-upper-test (form-init11109390307925406588.clj:61):
-; expected:
-"WORLDd"
-
-; actual:
-"WORLD"
-
-; 21 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; FAIL in todos.topics.tdd-test/simple-upper-test (form-init11109390307925406588.clj:61):
-; expected:
-"WORLDd"
-
-; actual:
-"WORLD"
-
-; 21 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
-#'todos.topics.tdd-test/simple-upper-test
-clj꞉todos.topics.tdd-test꞉> 
-; Running all project tests…
-Audit: called  expenses-greater-than  with  10
-; 21 tests finished, all passing 👍, ns: 1, vars: 7
-clj꞉todos.topics.tdd-test꞉> 
+clj꞉todos.topics.macro꞉> 
+; Execution error (ClassCastException) at todos.topics.macro/eval7859 (form-init5794565193594104757.clj:209).
+; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/anaphoric-if
+clj꞉todos.topics.macro꞉> 
+24
+clj꞉todos.topics.macro꞉> 
+24
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/anaphoric-if
+clj꞉todos.topics.macro꞉> 
+24
+clj꞉todos.topics.macro꞉> 
+24
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/anaphoric-if
+clj꞉todos.topics.macro꞉> 
+24
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/with-it
+clj꞉todos.topics.macro꞉> 
+; Syntax error compiling at (macro.clj:230:1).
+; No such var: todos.topics.macro/operator
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/with-it
+clj꞉todos.topics.macro꞉> 
+; Syntax error compiling at (macro.clj:230:1).
+; No such var: todos.topics.macro/operator
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/with-it
+clj꞉todos.topics.macro꞉> 
+nil
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/with-it
+clj꞉todos.topics.macro꞉> 
+nil
+clj꞉todos.topics.macro꞉> 
+(let* [it (some-computation 12)] (if it (* 2 it)))
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/with-it
+clj꞉todos.topics.macro꞉> 
+; Syntax error macroexpanding clojure.core/let at (macro.clj:230:1).
+; todos.topics.macro/it - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+; todos.topics.macro/it - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+; todos.topics.macro/it - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+; todos.topics.macro/it - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/with-it
+clj꞉todos.topics.macro꞉> 
+(let* [it (some-computation 12)] (if it (* 2 it)))
+clj꞉todos.topics.macro꞉> 
+; Syntax error compiling at (macro.clj:226:1).
+; Unable to resolve symbol: it in this context
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/with-it
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/awhen
+clj꞉todos.topics.macro꞉> 
+; Syntax error compiling at (macro.clj:238:16).
+; Unable to resolve symbol: it in this context
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/surface-area-cylinder
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.macro/thread-it
+clj꞉todos.topics.macro꞉> 
+386
+clj꞉todos.topics.macro꞉> 
+(let* [it (* 10 20)] (todos.topics.macro/thread-it (inc it) (- it 8) (* 10 it) (/ it 5)))
+clj꞉todos.topics.macro꞉> 
+(clojure.core/let [it (* 10 20)] (todos.topics.macro/thread-it (inc it) (- it 8) (* 10 it) (/ it 5)))
+clj꞉todos.topics.macro꞉> 
+#'todos.topics.compiletime/ALPHABETS
+clj꞉todos.topics.compiletime꞉> 
+; Syntax error compiling at (compiletime.clj:7:20).
+; Unable to resolve symbol: count in this context
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/ALPHABETS
+clj꞉todos.topics.compiletime꞉> 
+; Syntax error compiling at (compiletime.clj:7:20).
+; Unable to resolve symbol: count in this context
+clj꞉todos.topics.compiletime꞉> 
+; Syntax error compiling at (compiletime.clj:7:20).
+; Unable to resolve symbol: count in this context
+clj꞉todos.topics.compiletime꞉> 
+; Syntax error compiling at (compiletime.clj:7:20).
+; Unable to resolve symbol: count in this context
+clj꞉todos.topics.compiletime꞉> 
+nil
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/ALPHABETS
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/NUM-ALPHABETS
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/INDICES
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/lookup
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/shift
+clj꞉todos.topics.compiletime꞉> 
+15
+clj꞉todos.topics.compiletime꞉> 
+20
+clj꞉todos.topics.compiletime꞉> 
+4
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/shifted-tableau
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/encrypt
+clj꞉todos.topics.compiletime꞉> 
+; Execution error (ArityException) at todos.topics.compiletime/eval7987 (form-init5794565193594104757.clj:27).
+; Wrong number of args (1) passed to: todos.topics.compiletime/encrypt
+clj꞉todos.topics.compiletime꞉> 
+"xax"
+clj꞉todos.topics.compiletime꞉> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.APersistentVector/null (APersistentVector.java:294).
+; Key must be integer
+clj꞉todos.topics.compiletime꞉> 
+{\a \n,
+ \b \o,
+ \c \p,
+ \d \q,
+ \e \r,
+ \f \s,
+ \g \t,
+ \h \u,
+ \i \v,
+ \j \w,
+ \k \x,
+ \l \y,
+ \m \z,
+ \n \a,
+ \o \b,
+ \p \c,
+ \q \d,
+ \r \e,
+ \s \f,
+ \t \g,
+ \u \h,
+ \v \i,
+ \w \j,
+ \x \k,
+ \y \l,
+ \z \m}
+clj꞉todos.topics.compiletime꞉> 
+clojure.lang.PersistentHashMap
+clj꞉todos.topics.compiletime꞉> 
+{\a \n,
+ \b \o,
+ \c \p,
+ \d \q,
+ \e \r,
+ \f \s,
+ \g \t,
+ \h \u,
+ \i \v,
+ \j \w,
+ \k \x,
+ \l \y,
+ \m \z,
+ \n \a,
+ \o \b,
+ \p \c,
+ \q \d,
+ \r \e,
+ \s \f,
+ \t \g,
+ \u \h,
+ \v \i,
+ \w \j,
+ \x \k,
+ \y \l,
+ \z \m}
+clj꞉todos.topics.compiletime꞉> 
+(nil nil nil)
+clj꞉todos.topics.compiletime꞉> 
+"aav"
+clj꞉todos.topics.compiletime꞉> 
+(1 1 nil)
+clj꞉todos.topics.compiletime꞉> 
+(1 2 2 3 3 3)
+clj꞉todos.topics.compiletime꞉> 
+(1 2 2 3 3 3)
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/decrypt
+clj꞉todos.topics.compiletime꞉> 
+; Syntax error compiling at (compiletime.clj:36:17).
+; Unable to resolve symbol: shifted-tableau in this context
+clj꞉todos.topics.compiletime꞉> 
+; Syntax error compiling at (compiletime.clj:21:8).
+; Unable to resolve symbol: ALPHABETS in this context
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/def-rot-encryptor
+clj꞉todos.topics.compiletime꞉> 
+#'todos.topics.compiletime/def-rot-encryptor
+clj꞉todos.topics.compiletime꞉> 

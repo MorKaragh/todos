@@ -180,6 +180,70 @@
 (try-catch #(/ 1 1) println)
 (try-catch #(/ 1 0) println)
 
-(try 
-  (fn* [] (/ 1 0)) 
+(try
+  (fn* [] (/ 1 0))
   (catch java.lang.Exception e__8123__auto__ (println (.getMessage e__8123__auto__))))
+
+
+(defmacro single-arg-fn [binding-form & body]
+  `((fn [~(first binding-form)] ~@body) ~(second binding-form)))
+
+(defmacro my-let [lettings & body]
+  (if (empty? lettings)
+    `(do ~@body)
+    `(single-arg-fn ~(take 2 lettings)
+                    (my-let ~(drop 2 lettings) ~@body))))
+
+#_{:clj-kondo/ignore [:unresolved-symbol]}
+(clojure.walk/macroexpand-all '(my-let [x 10
+                                        y x
+                                        z (+ x y)]
+                                       (* x y z)))
+
+((fn* ([x] ((fn* ([y] ((fn* ([z] (do (* x y z)))) (+ x y)))) x))) 10)
+
+
+;; anaphoric macro
+(defn some-computation [x]
+  (if (even? x) false (inc x)))
+
+(if (some-computation 11)
+  (* 2 (some-computation 11)))
+
+;; better way
+(if-let [computation (some-computation 11)]
+  (* 2 computation))
+
+(defmacro anaphoric-if [test-form then-form]
+  `(if-let [~'it ~test-form]
+     ~then-form))
+
+;; best way
+#_{:clj-kondo/ignore [:unresolved-symbol]}
+(anaphoric-if (some-computation 11)
+              (* 2 it))
+
+(defmacro with-it [operator test-form & exprs]
+  `(let [~'it ~test-form]
+     (~operator ~'it ~@exprs)))
+
+(macroexpand '(with-it if (some-computation 12)
+                (* 2 it)))
+
+(defn surface-area-cylinder [r h]
+  (-> r
+      (+ h)
+      (* 2 Math/PI r)))
+
+(defmacro thread-it [& [first-expr & rest-expr]]
+  (if (empty? rest-expr)
+    first-expr
+    `(let [~'it ~first-expr]
+       (thread-it ~@rest-expr))))
+
+#_{:clj-kondo/ignore [:unresolved-symbol]}
+(thread-it (* 10 20)
+           (inc it)
+           (- it 8)
+           (* 10 it)
+           (/ it 5))

@@ -433,13 +433,7 @@
   (def above-five (partial above-threshold 5))
   (filter above-five [1 2 3 4 5 6 7 8])
 
-  (defn slow-calc [x y]
-    (Thread/sleep 1000)
-    (* x y))
 
-  (def fast-calc (memoize slow-calc))
-
-  (fast-calc 2 5)
 
   (def users
     [{:username     "kyle"
