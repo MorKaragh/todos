@@ -54,3 +54,328 @@ nil
 clj꞉todos.topics.spec꞉> 
 1
 clj꞉todos.topics.spec꞉> 
+; Syntax error compiling at (spec.clj:8:1).
+; No such namespace: d
+clj꞉todos.topics.spec꞉> 
+:speca/even
+clj꞉todos.topics.spec꞉> 
+:speca/str
+clj꞉todos.topics.spec꞉> 
+; Syntax error compiling at (spec.clj:11:1).
+; Unable to resolve symbol: doc in this context
+clj꞉todos.topics.spec꞉> 
+; Syntax error compiling at (spec.clj:11:1).
+; No such var: s/doc
+clj꞉todos.topics.spec꞉> 
+; Syntax error compiling at (spec.clj:11:1).
+; Unable to resolve symbol: doc in this context
+clj꞉todos.topics.spec꞉> 
+; Syntax error compiling at (spec.clj:11:1).
+; No such var: s/doc
+clj꞉todos.topics.spec꞉> 
+; Syntax error compiling at (spec.clj:12:1).
+; Unable to resolve symbol: doc in this context
+clj꞉todos.topics.spec꞉> 
+nil
+clj꞉todos.topics.spec꞉> 
+; Syntax error compiling at (spec.clj:11:1).
+; Unable to resolve symbol: doc in this context
+clj꞉todos.topics.spec꞉> 
+; Syntax error compiling at (spec.clj:12:1).
+; Unable to resolve symbol: doc in this context
+clj꞉todos.topics.spec꞉> 
+; Syntax error macroexpanding clojure.core/ns at (spec.clj:1:1).
+; ((:require [clojure.spec.alpha :as s] [clojure.repl :refer doc])) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉todos.topics.spec꞉> 
+nil
+clj꞉todos.topics.spec꞉> 
+-------------------------
+clojure.core/map
+([f] [f coll] [f c1 c2] [f c1 c2 c3] [f c1 c2 c3 & colls])
+  Returns a lazy sequence consisting of the result of applying f to
+  the set of first items of each coll, followed by applying f to the
+  set of second items in each coll, until any one of the colls is
+  exhausted.  Any remaining items in other colls are ignored. Function
+  f should accept number-of-colls arguments. Returns a transducer when
+  no collection is provided.
+nil
+clj꞉todos.topics.spec꞉> 
+-------------------------
+:speca/even
+Spec
+  even?
+nil
+clj꞉todos.topics.spec꞉> 
+:speca/combi
+clj꞉todos.topics.spec꞉> 
+:clojure.spec.alpha/invalid
+clj꞉todos.topics.spec꞉> 
+"assssssssssssss"
+clj꞉todos.topics.spec꞉> 
+"hi" - failed: (> (count %) 10) spec: :speca/combi
+nil
+clj꞉todos.topics.spec꞉> 
+"hi" - failed: (> (count %) 10) spec: :speca/combi
+nil
+clj꞉todos.topics.spec꞉> 
+Success!
+nil
+clj꞉todos.topics.spec꞉> 
+1 - failed: string? spec: :speca/combi
+nil
+clj꞉todos.topics.spec꞉> 
+#:clojure.spec.alpha{:problems [{:path [], :pred clojure.core/string?, :val 100500, :via [:speca/combi], :in []}],
+                     :spec :speca/combi,
+                     :value 100500}
+clj꞉todos.topics.spec꞉> 
+:todos.topics.spec/as
+clj꞉todos.topics.spec꞉> 
+:as
+clj꞉todos.topics.spec꞉> 
+:todos.topics.spec/as
+clj꞉todos.topics.spec꞉> 
+:speca/name
+clj꞉todos.topics.spec꞉> 
+:speca/age
+clj꞉todos.topics.spec꞉> 
+:speca/birth-year
+clj꞉todos.topics.spec꞉> 
+:speca/person
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+"2000" - failed: int? in: [:speca/birth-year] at: [:speca/birth-year] spec: :speca/birth-year
+nil
+clj꞉todos.topics.spec꞉> 
+; Execution error at todos.topics.spec/eval7905 (form-init3045079654088021192.clj:40).
+; Unable to resolve spec: :speca/person-norm
+clj꞉todos.topics.spec꞉> 
+:speca/person-norm
+clj꞉todos.topics.spec꞉> 
+:speca/person-norm
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+"2000" - failed: int? in: [:speca/birth-year] at: [:speca/birth-year] spec: :speca/birth-year
+nil
+clj꞉todos.topics.spec꞉> 
+:speca/person-norm
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+todos.topics.spec.Person
+clj꞉todos.topics.spec꞉> 
+{:name "Bob", :age 20, :birth-year 2000}
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+:speca/mark
+clj꞉todos.topics.spec꞉> 
+:speca/model
+clj꞉todos.topics.spec꞉> 
+#function[clojure.core/int?]
+clj꞉todos.topics.spec꞉> 
+:speca/year
+clj꞉todos.topics.spec꞉> 
+:speca/model
+clj꞉todos.topics.spec꞉> 
+:speca/mark
+clj꞉todos.topics.spec꞉> 
+:speca/car
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+#:clojure.spec.alpha{:problems
+                     [{:path [],
+                       :pred
+                       (clojure.core/fn [%] (clojure.core/or (clojure.core/nil? %) (clojure.core/sequential? %))),
+                       :val {:mark "Ford", :model "Focus"},
+                       :via [:speca/car],
+                       :in []}],
+                     :spec :speca/car,
+                     :value {:mark "Ford", :model "Focus"}}
+clj꞉todos.topics.spec꞉> 
+#:clojure.spec.alpha{:problems
+                     [{:path [],
+                       :pred
+                       (clojure.core/fn [%] (clojure.core/or (clojure.core/nil? %) (clojure.core/sequential? %))),
+                       :val #:speca{:mark "Ford", :model "Focus"},
+                       :via [:speca/car],
+                       :in []}],
+                     :spec :speca/car,
+                     :value #:speca{:mark "Ford", :model "Focus"}}
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+:speca/car
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+:my.config/port
+clj꞉todos.topics.spec꞉> 
+:my.config/port
+clj꞉todos.topics.spec꞉> 
+:my.config/host
+clj꞉todos.topics.spec꞉> 
+:my.config/id
+clj꞉todos.topics.spec꞉> 
+:my.config/server
+clj꞉todos.topics.spec꞉> 
+#:my.config{:id :s1, :host "example.com", :port 5555}
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+{:clojure.spec.alpha/op :clojure.spec.alpha/amp,
+ :p1
+ {:clojure.spec.alpha/op :clojure.spec.alpha/rep,
+  :p2
+  {:clojure.spec.alpha/op :clojure.spec.alpha/pcat,
+   :ps [#function[clojure.core/keyword?] #function[clojure.core/any?]],
+   :ret {},
+   :ks [:clojure.spec.alpha/k :clojure.spec.alpha/v],
+   :forms [clojure.core/keyword? clojure.core/any?],
+   :rep+ nil},
+  :splice false,
+  :forms (clojure.spec.alpha/cat :clojure.spec.alpha/k clojure.core/keyword? :clojure.spec.alpha/v clojure.core/any?),
+  :id #uuid "25774557-2bcd-494b-87e2-d1ad7a40d628",
+  :p1
+  {:clojure.spec.alpha/op :clojure.spec.alpha/pcat,
+   :ps [#function[clojure.core/keyword?] #function[clojure.core/any?]],
+   :ret {},
+   :ks [:clojure.spec.alpha/k :clojure.spec.alpha/v],
+   :forms [clojure.core/keyword? clojure.core/any?],
+   :rep+ nil},
+  :ret []},
+ :amp
+ (clojure.spec.alpha/*
+  (clojure.spec.alpha/cat :clojure.spec.alpha/k clojure.core/keyword? :clojure.spec.alpha/v clojure.core/any?)),
+ :ps
+ [:clojure.spec.alpha/kvs->map
+  #object[clojure.spec.alpha$map_spec_impl$reify__1997 0x31ab20fe "clojure.spec.alpha$map_spec_impl$reify__1997@31ab20fe"]],
+ :forms [:clojure.spec.alpha/kvs->map mspec__2546__auto__],
+ :clojure.spec.alpha/gfn #function[todos.topics.spec/eval8053/fn--8065]}
+clj꞉todos.topics.spec꞉> 
+:speca/car
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+:speca/used?
+clj꞉todos.topics.spec꞉> 
+:speca/color
+clj꞉todos.topics.spec꞉> 
+:speca/used?
+clj꞉todos.topics.spec꞉> 
+:speca/color
+clj꞉todos.topics.spec꞉> 
+:speca/sold-car
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+#:clojure.spec.alpha{:problems
+                     ({:path [],
+                       :pred clojure.core/boolean?,
+                       :val [:speca/mark "Toyota" :speca/model "Mark II" :speca/color "red" :speca/used? true],
+                       :via [:speca/sold-car :speca/used?],
+                       :in []}
+                      {:path [],
+                       :pred #{"blue" "white" "red"},
+                       :val [:speca/mark "Toyota" :speca/model "Mark II" :speca/color "red" :speca/used? true],
+                       :via [:speca/sold-car :speca/color],
+                       :in []}),
+                     :spec :speca/sold-car,
+                     :value [:speca/mark "Toyota" :speca/model "Mark II" :speca/color "red" :speca/used? true]}
+clj꞉todos.topics.spec꞉> 
+:speca/sold-car
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+nil
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+:speca/car
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+:speca/used?
+clj꞉todos.topics.spec꞉> 
+:speca/color
+clj꞉todos.topics.spec꞉> 
+:speca/sold-car
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+:speca/vec-car
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+:speca/car
+clj꞉todos.topics.spec꞉> 
+:speca/used?
+clj꞉todos.topics.spec꞉> 
+:speca/color
+clj꞉todos.topics.spec꞉> 
+:speca/sold-car
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+:speca/car
+clj꞉todos.topics.spec꞉> 
+:speca/car
+clj꞉todos.topics.spec꞉> 
+:speca/used?
+clj꞉todos.topics.spec꞉> 
+:speca/color
+clj꞉todos.topics.spec꞉> 
+:speca/sold-car
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+#'todos.topics.spec/event-type
+clj꞉todos.topics.spec꞉> 
+:event/descr
+clj꞉todos.topics.spec꞉> 
+:event/status
+clj꞉todos.topics.spec꞉> 
+#multifn[event-type 0x6d7ab58b]
+clj꞉todos.topics.spec꞉> 
+#multifn[event-type 0x6d7ab58b]
+clj꞉todos.topics.spec꞉> 
+:event/event
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
+false
+clj꞉todos.topics.spec꞉> 
