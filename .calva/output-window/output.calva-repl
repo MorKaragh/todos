@@ -5,6 +5,11 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this:
+; "calva.autoSelectReplConnectProjectType": "Leiningen"
+;   - See https://calva.io/connect/#auto-select-project-type
+; 
 ; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
 ; Hooking up nREPL sessions...
 ; Connected session: clj
@@ -19,227 +24,33 @@ clj꞉todos.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉todos.core꞉> 
 nil
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/single-arg-fn
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/my-let
-clj꞉todos.topics.macro꞉> 
-2000
-clj꞉todos.topics.macro꞉> 
-(1 2)
-clj꞉todos.topics.macro꞉> 
-(3 4 5 6)
-clj꞉todos.topics.macro꞉> 
-((clojure.core/fn [x] (todos.topics.macro/my-let (y x z (+ x y)) (* x y z))) 10)
-clj꞉todos.topics.macro꞉> 
-(todos.topics.macro/single-arg-fn (x 10) (todos.topics.macro/my-let (y x z (+ x y)) (* x y z)))
-clj꞉todos.topics.macro꞉> 
-((fn* ([x] ((fn* ([y] ((fn* ([z] (do (* x y z)))) (+ x y)))) x))) 10)
-clj꞉todos.topics.macro꞉> 
-2000
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/some-computation
-clj꞉todos.topics.macro꞉> 
-12
-clj꞉todos.topics.macro꞉> 
+clj꞉todos.topics.spec꞉> 
+; Execution error (ClassCastException) at todos.topics.spec/eval7569 (form-init3045079654088021192.clj:4).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉todos.topics.spec꞉> 
+1000
+clj꞉todos.topics.spec꞉> 
+:clojure.spec.alpha/invalid
+clj꞉todos.topics.spec꞉> 
+1000
+clj꞉todos.topics.spec꞉> 
+true
+clj꞉todos.topics.spec꞉> 
 false
-clj꞉todos.topics.macro꞉> 
-24
-clj꞉todos.topics.macro꞉> 
+clj꞉todos.topics.spec꞉> 
+; Execution error (IllegalArgumentException) at todos.topics.spec/eval7581 (form-init3045079654088021192.clj:8).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉todos.topics.spec꞉> 
 nil
-clj꞉todos.topics.macro꞉> 
-; Execution error (ClassCastException) at todos.topics.macro/eval7859 (form-init5794565193594104757.clj:209).
-; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/anaphoric-if
-clj꞉todos.topics.macro꞉> 
-24
-clj꞉todos.topics.macro꞉> 
-24
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/anaphoric-if
-clj꞉todos.topics.macro꞉> 
-24
-clj꞉todos.topics.macro꞉> 
-24
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/anaphoric-if
-clj꞉todos.topics.macro꞉> 
-24
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/with-it
-clj꞉todos.topics.macro꞉> 
-; Syntax error compiling at (macro.clj:230:1).
-; No such var: todos.topics.macro/operator
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/with-it
-clj꞉todos.topics.macro꞉> 
-; Syntax error compiling at (macro.clj:230:1).
-; No such var: todos.topics.macro/operator
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/with-it
-clj꞉todos.topics.macro꞉> 
+clj꞉todos.topics.spec꞉> 
+3
+clj꞉todos.topics.spec꞉> 
+2
+clj꞉todos.topics.spec꞉> 
+; Execution error (ArityException) at todos.topics.spec/eval7834 (form-init3045079654088021192.clj:8).
+; Wrong number of args (2) passed to: clojure.lang.PersistentHashSet
+clj꞉todos.topics.spec꞉> 
 nil
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/with-it
-clj꞉todos.topics.macro꞉> 
-nil
-clj꞉todos.topics.macro꞉> 
-(let* [it (some-computation 12)] (if it (* 2 it)))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/with-it
-clj꞉todos.topics.macro꞉> 
-; Syntax error macroexpanding clojure.core/let at (macro.clj:230:1).
-; todos.topics.macro/it - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
-; todos.topics.macro/it - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
-; todos.topics.macro/it - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
-; todos.topics.macro/it - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/with-it
-clj꞉todos.topics.macro꞉> 
-(let* [it (some-computation 12)] (if it (* 2 it)))
-clj꞉todos.topics.macro꞉> 
-; Syntax error compiling at (macro.clj:226:1).
-; Unable to resolve symbol: it in this context
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/with-it
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/awhen
-clj꞉todos.topics.macro꞉> 
-; Syntax error compiling at (macro.clj:238:16).
-; Unable to resolve symbol: it in this context
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/surface-area-cylinder
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.macro/thread-it
-clj꞉todos.topics.macro꞉> 
-386
-clj꞉todos.topics.macro꞉> 
-(let* [it (* 10 20)] (todos.topics.macro/thread-it (inc it) (- it 8) (* 10 it) (/ it 5)))
-clj꞉todos.topics.macro꞉> 
-(clojure.core/let [it (* 10 20)] (todos.topics.macro/thread-it (inc it) (- it 8) (* 10 it) (/ it 5)))
-clj꞉todos.topics.macro꞉> 
-#'todos.topics.compiletime/ALPHABETS
-clj꞉todos.topics.compiletime꞉> 
-; Syntax error compiling at (compiletime.clj:7:20).
-; Unable to resolve symbol: count in this context
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/ALPHABETS
-clj꞉todos.topics.compiletime꞉> 
-; Syntax error compiling at (compiletime.clj:7:20).
-; Unable to resolve symbol: count in this context
-clj꞉todos.topics.compiletime꞉> 
-; Syntax error compiling at (compiletime.clj:7:20).
-; Unable to resolve symbol: count in this context
-clj꞉todos.topics.compiletime꞉> 
-; Syntax error compiling at (compiletime.clj:7:20).
-; Unable to resolve symbol: count in this context
-clj꞉todos.topics.compiletime꞉> 
-nil
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/ALPHABETS
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/NUM-ALPHABETS
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/INDICES
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/lookup
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/shift
-clj꞉todos.topics.compiletime꞉> 
-15
-clj꞉todos.topics.compiletime꞉> 
-20
-clj꞉todos.topics.compiletime꞉> 
-4
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/shifted-tableau
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/encrypt
-clj꞉todos.topics.compiletime꞉> 
-; Execution error (ArityException) at todos.topics.compiletime/eval7987 (form-init5794565193594104757.clj:27).
-; Wrong number of args (1) passed to: todos.topics.compiletime/encrypt
-clj꞉todos.topics.compiletime꞉> 
-"xax"
-clj꞉todos.topics.compiletime꞉> 
-; Error printing return value (IllegalArgumentException) at clojure.lang.APersistentVector/null (APersistentVector.java:294).
-; Key must be integer
-clj꞉todos.topics.compiletime꞉> 
-{\a \n,
- \b \o,
- \c \p,
- \d \q,
- \e \r,
- \f \s,
- \g \t,
- \h \u,
- \i \v,
- \j \w,
- \k \x,
- \l \y,
- \m \z,
- \n \a,
- \o \b,
- \p \c,
- \q \d,
- \r \e,
- \s \f,
- \t \g,
- \u \h,
- \v \i,
- \w \j,
- \x \k,
- \y \l,
- \z \m}
-clj꞉todos.topics.compiletime꞉> 
-clojure.lang.PersistentHashMap
-clj꞉todos.topics.compiletime꞉> 
-{\a \n,
- \b \o,
- \c \p,
- \d \q,
- \e \r,
- \f \s,
- \g \t,
- \h \u,
- \i \v,
- \j \w,
- \k \x,
- \l \y,
- \m \z,
- \n \a,
- \o \b,
- \p \c,
- \q \d,
- \r \e,
- \s \f,
- \t \g,
- \u \h,
- \v \i,
- \w \j,
- \x \k,
- \y \l,
- \z \m}
-clj꞉todos.topics.compiletime꞉> 
-(nil nil nil)
-clj꞉todos.topics.compiletime꞉> 
-"aav"
-clj꞉todos.topics.compiletime꞉> 
-(1 1 nil)
-clj꞉todos.topics.compiletime꞉> 
-(1 2 2 3 3 3)
-clj꞉todos.topics.compiletime꞉> 
-(1 2 2 3 3 3)
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/decrypt
-clj꞉todos.topics.compiletime꞉> 
-; Syntax error compiling at (compiletime.clj:36:17).
-; Unable to resolve symbol: shifted-tableau in this context
-clj꞉todos.topics.compiletime꞉> 
-; Syntax error compiling at (compiletime.clj:21:8).
-; Unable to resolve symbol: ALPHABETS in this context
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/def-rot-encryptor
-clj꞉todos.topics.compiletime꞉> 
-#'todos.topics.compiletime/def-rot-encryptor
-clj꞉todos.topics.compiletime꞉> 
+clj꞉todos.topics.spec꞉> 
+1
+clj꞉todos.topics.spec꞉> 
