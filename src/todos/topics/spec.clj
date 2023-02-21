@@ -85,5 +85,59 @@
                         :event/descr "asa"
                         :event/status 500})
 
+(s/valid? (s/coll-of string?) ["a" "b"])
+
+(s/def :tuple/tpl (s/tuple double? double? double?))
+(s/valid? :tuple/tpl [1.0 2.0 1.1])
+
+(s/def :mapp/map? (s/map-of keyword? number?))
+(s/valid? :mapp/map? {:a 1, :b 2})
+
+(s/def :make/me-a-map (s/cat :name string? :value number?))
+(s/conform :make/me-a-map ["Bob" 42])
+
+(s/def :seq/keywords (s/* keyword?))
+(s/conform :seq/keywords [:a :b :c])
+
+(s/def :seq/strings (s/+ string?))
+(s/conform :seq/strings ["a" "b" "c"])
+
+(s/def :seq/strings-opt (s/+ string?))
+(s/conform :seq/strings-opt ["a" "b" "c"])
+
+(s/def :map/keys-then-strings (s/cat :keywords (s/+ keyword?)
+                                     :strings (s/+ string?)))
+(s/conform :map/keys-then-strings [:a :b :c "a" "b" "c"])
+
+(s/def :map/from-pairs (s/* (s/cat :name string? :val number?)))
+(s/conform :map/from-pairs ["Bob" 45 "Alice" 41])
+
+(s/def :map/various (s/* (s/cat :name string?
+                                :val (s/alt :bool boolean? :num number?))))
+(s/conform :map/various ["Alice" 45 "Bob" true])
+
+(s/def :check/whole-coll-also (s/& (s/* string?) #(= 3 (count %))))
+(s/valid? :check/whole-coll-also ["a" "b" "c"])
+
+(s/def :map/with-nested-colls (s/cat :name string? 
+                                     :coins (s/spec (s/* number?))
+                                     :another-name string?
+                                     :her-coins (s/spec (s/* number?))))
+(s/conform :map/with-nested-colls  ["Bob" [42 45 44] "Alice" [11 22]])
+
+
+;;usage
+
+(defn get-age-plus-ten
+  [person]
+  {:pre [(s/valid? (s/keys :req-un [:speca/name :speca/age]
+                           :opt-un [:speca/year]) person)]
+   :post [(s/valid? #(> % 42) %)]}
+  (println person)
+  (+ 10 (:age person)))
+
+(get-age-plus-ten {:name "Bob" :age 34})
+(get-age-plus-ten {:name "Alice" :age 20})
+
 
 
